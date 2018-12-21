@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartViewController.swift
 //  Flits
 //
 //  Created by Jakob Lierman on 20/12/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
