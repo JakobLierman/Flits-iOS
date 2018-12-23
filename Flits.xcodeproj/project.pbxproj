@@ -31,8 +31,8 @@
 		36A39B8F21CBE57B00AF5C15 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		36A39B9121CBE59100AF5C15 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		36A39B9821CBE76300AF5C15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		36A39B9C21CC50DA00AF5C15 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		36A39B9D21CC50DB00AF5C15 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		36A39B9E21CFCD5D00AF5C15 /* nl-BE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-BE"; path = "nl-BE.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		36A39B9F21CFCD5F00AF5C15 /* nl-BE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-BE"; path = "nl-BE.lproj/Main.strings"; sourceTree = "<group>"; };
 		6AB7AC9457CC8DA2AD9C31CA /* Pods_Flits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA675416D5D9106723F2E5D /* Pods-Flits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.release.xcconfig"; sourceTree = "<group>"; };
 		E33F5E524D261E3284CB3F1A /* Pods-Flits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +114,7 @@
 				36A39B6D21CBDF2700AF5C15 /* Frameworks */,
 				36A39B6E21CBDF2700AF5C15 /* Resources */,
 				569341FFA4097B44C82B95C3 /* [CP] Embed Pods Frameworks */,
+				F4CA48A8289329F68DB792F7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -202,21 +203,53 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Flits/Pods-Flits-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flits/Pods-Flits-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CA48A8289329F68DB792F7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Flits/Pods-Flits-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Flits/Pods-Flits-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -241,7 +274,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				36A39B7D21CBDF2900AF5C15 /* Base */,
-				36A39B9C21CC50DA00AF5C15 /* nl */,
+				36A39B9E21CFCD5D00AF5C15 /* nl-BE */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -250,7 +283,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				36A39B9821CBE76300AF5C15 /* Base */,
-				36A39B9D21CC50DB00AF5C15 /* nl */,
+				36A39B9F21CFCD5F00AF5C15 /* nl-BE */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

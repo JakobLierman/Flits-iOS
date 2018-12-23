@@ -1,0 +1,60 @@
+
+/* Class = "UILabel"; text = "Emailadres"; ObjectID = "4W4-Lt-K9a"; */
+"4W4-Lt-K9a.text" = "Emailadres";
+
+/* Class = "UIButton"; normalTitle = "Maak een account"; ObjectID = "9hD-wo-vCE"; */
+"9hD-wo-vCE.normalTitle" = "Maak een account";
+
+/* Class = "UILabel"; text = "Wachtwoord"; ObjectID = "9tl-M8-NNt"; */
+"9tl-M8-NNt.text" = "Wachtwoord";
+
+/* Class = "UILabel"; text = "Emailadres"; ObjectID = "AxJ-TU-zpW"; */
+"AxJ-TU-zpW.text" = "Emailadres";
+
+/* Class = "UITextField"; placeholder = "Wachtwoord"; ObjectID = "Bv0-15-fdv"; */
+"Bv0-15-fdv.placeholder" = "Wachtwoord";
+
+/* Class = "UIBarButtonItem"; title = "Terug"; ObjectID = "CE4-R9-6BR"; */
+"CE4-R9-6BR.title" = "Terug";
+
+/* Class = "UIButton"; normalTitle = "Inloggen"; ObjectID = "CkP-rB-U6M"; */
+"CkP-rB-U6M.normalTitle" = "Inloggen";
+
+/* Class = "UILabel"; text = "Wachtwoord"; ObjectID = "Dse-XH-2zQ"; */
+"Dse-XH-2zQ.text" = "Wachtwoord";
+
+/* Class = "UIViewController"; title = "Inloggen"; ObjectID = "HC8-F5-MyJ"; */
+"HC8-F5-MyJ.title" = "Inloggen";
+
+/* Class = "UITextField"; placeholder = "Emailadres"; ObjectID = "XKe-Dq-Zs9"; */
+"XKe-Dq-Zs9.placeholder" = "Emailadres";
+
+/* Class = "UINavigationItem"; title = "Flits"; ObjectID = "XkP-vh-aco"; */
+"XkP-vh-aco.title" = "Flits";
+
+/* Class = "UIButton"; normalTitle = "Uitloggen"; ObjectID = "XzJ-LK-tsV"; */
+"XzJ-LK-tsV.normalTitle" = "Uitloggen";
+
+/* Class = "UITextField"; placeholder = "Emailadres"; ObjectID = "bEc-6q-lch"; */
+"bEc-6q-lch.placeholder" = "Emailadres";
+
+/* Class = "UIButton"; normalTitle = "Registreren"; ObjectID = "eZG-n7-lrb"; */
+"eZG-n7-lrb.normalTitle" = "Registreren";
+
+/* Class = "UITextField"; placeholder = "Wachtwoord herhalen"; ObjectID = "i0M-PD-zv6"; */
+"i0M-PD-zv6.placeholder" = "Wachtwoord herhalen";
+
+/* Class = "UITextField"; placeholder = "Wachtwoord"; ObjectID = "jLR-9g-2kv"; */
+"jLR-9g-2kv.placeholder" = "Wachtwoord";
+
+/* Class = "UIButton"; normalTitle = "Heb je al een account? Log in."; ObjectID = "lYq-gj-PK8"; */
+"lYq-gj-PK8.normalTitle" = "Heb je al een account? Log in.";
+
+/* Class = "UITextField"; placeholder = "Volledige naam"; ObjectID = "mQk-OZ-uVW"; */
+"mQk-OZ-uVW.placeholder" = "Volledige naam";
+
+/* Class = "UIViewController"; title = "Registreren"; ObjectID = "nyg-oF-Vti"; */
+"nyg-oF-Vti.title" = "Registreren";
+
+/* Class = "UILabel"; text = "Naam"; ObjectID = "xx3-OX-gJ8"; */
+"xx3-OX-gJ8.text" = "Naam";

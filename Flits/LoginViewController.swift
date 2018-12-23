@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
+
+    // MARK: Properties
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
+    // MARK: Actions
+    @IBAction func logInAction(_ sender: UIButton) {
+        // Log user in
+        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+            if error == nil {
+                self.performSegue(withIdentifier: "loginToHome", sender: self)
+            }
+            else {
+                // Error while logging in
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation

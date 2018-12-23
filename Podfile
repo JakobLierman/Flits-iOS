@@ -7,5 +7,7 @@ target 'Flits' do
 
   # Pods for Flits
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end

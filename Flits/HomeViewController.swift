@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController {
 
@@ -16,7 +17,20 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    // MARK: Actions
+    @IBAction func logOutAction(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        }
+        catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initial = storyboard.instantiateInitialViewController()
+        UIApplication.shared.keyWindow?.rootViewController = initial
+    }
+    
     /*
     // MARK: - Navigation
 
