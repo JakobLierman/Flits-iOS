@@ -17,6 +17,7 @@
 		36A39B9921CBE76300AF5C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A39B9721CBE76300AF5C15 /* Main.storyboard */; };
 		36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */; };
 		36D9641E21D04D54004CC1A2 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */; };
+		36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9642521D052BD004CC1A2 /* SpeedCamera.swift */; };
 		BA5D196BC3A911C8BA19BA18 /* Pods_Flits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB7AC9457CC8DA2AD9C31CA /* Pods_Flits.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		36A39B9F21CFCD5F00AF5C15 /* nl-BE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-BE"; path = "nl-BE.lproj/Main.strings"; sourceTree = "<group>"; };
 		36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		36D9642521D052BD004CC1A2 /* SpeedCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamera.swift; sourceTree = "<group>"; };
 		6AB7AC9457CC8DA2AD9C31CA /* Pods_Flits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA675416D5D9106723F2E5D /* Pods-Flits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.release.xcconfig"; sourceTree = "<group>"; };
 		E33F5E524D261E3284CB3F1A /* Pods-Flits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,19 +83,44 @@
 		36A39B7221CBDF2700AF5C15 /* Flits */ = {
 			isa = PBXGroup;
 			children = (
+				36D9642421D052A5004CC1A2 /* Models */,
+				36D9642321D05292004CC1A2 /* Views */,
+				36D9641F21D0512D004CC1A2 /* Controllers */,
 				36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */,
-				36A39B7521CBDF2700AF5C15 /* StartViewController.swift */,
 				36A39B7A21CBDF2900AF5C15 /* Assets.xcassets */,
-				36A39B7C21CBDF2900AF5C15 /* LaunchScreen.storyboard */,
-				36A39B9721CBE76300AF5C15 /* Main.storyboard */,
-				36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */,
 				36A39B7F21CBDF2900AF5C15 /* Info.plist */,
 				36A39B8521CBDF5B00AF5C15 /* GoogleService-Info.plist */,
+			);
+			path = Flits;
+			sourceTree = "<group>";
+		};
+		36D9641F21D0512D004CC1A2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				36A39B7521CBDF2700AF5C15 /* StartViewController.swift */,
+				36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */,
 				36A39B8D21CBE55800AF5C15 /* LoginViewController.swift */,
 				36A39B8F21CBE57B00AF5C15 /* SignupViewController.swift */,
 				36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */,
 			);
-			path = Flits;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		36D9642321D05292004CC1A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				36A39B7C21CBDF2900AF5C15 /* LaunchScreen.storyboard */,
+				36A39B9721CBE76300AF5C15 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		36D9642421D052A5004CC1A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				36D9642521D052BD004CC1A2 /* SpeedCamera.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		700B5A7554F1C1CCECA1DA1A /* Pods */ = {
@@ -265,6 +292,7 @@
 				36A39B8E21CBE55800AF5C15 /* LoginViewController.swift in Sources */,
 				36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */,
 				36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */,
+				36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */,
 				36A39B9021CBE57B00AF5C15 /* SignupViewController.swift in Sources */,
 				36A39B7421CBDF2700AF5C15 /* AppDelegate.swift in Sources */,
 				36D9641E21D04D54004CC1A2 /* AddItemViewController.swift in Sources */,
