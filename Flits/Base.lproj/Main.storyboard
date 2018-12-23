@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vjr-q9-1u4">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="0Y7-ds-SF4" customClass="StartViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zLF-n8-HL1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_Circular" translatesAutoresizingMaskIntoConstraints="NO" id="fZB-R1-Z1G">
-                                <rect key="frame" x="167" y="35" width="80" height="80"/>
+                                <rect key="frame" x="147.66666666666666" y="35" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="2GW-Rg-cvc"/>
                                     <constraint firstAttribute="width" constant="80" id="90S-dY-CKX"/>
@@ -27,13 +27,13 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Police_man_car" translatesAutoresizingMaskIntoConstraints="NO" id="eqK-G6-FNj">
-                                <rect key="frame" x="30" y="165" width="354" height="307"/>
+                                <rect key="frame" x="30" y="165" width="315" height="223"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="2cJ-yx-VR0"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hD-wo-vCE">
-                                <rect key="frame" x="82" y="522" width="250" height="80"/>
+                                <rect key="frame" x="62.666666666666657" y="438" width="249.99999999999997" height="80"/>
                                 <color key="backgroundColor" red="0.83696061372756958" green="0.29127943515777588" blue="0.26271748542785645" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="2v0-GV-bJO"/>
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-gj-PK8">
-                                <rect key="frame" x="104" y="617" width="206" height="30"/>
+                                <rect key="frame" x="84.666666666666686" y="533" width="206" height="30"/>
                                 <state key="normal" title="Heb je al een account? Log in.">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -79,7 +79,7 @@
                         <barButtonItem key="backBarButtonItem" title="Terug" id="CE4-R9-6BR"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="des-fx-crO" kind="presentation" identifier="alreadyLoggedIn" modalTransitionStyle="crossDissolve" id="O7N-Pq-b7q"/>
+                        <segue destination="des-fx-crO" kind="presentation" identifier="alreadyLoggedIn" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="O7N-Pq-b7q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sjJ-EG-G9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,18 +91,18 @@
             <objects>
                 <viewController title="Inloggen" id="HC8-F5-MyJ" customClass="LoginViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MBq-Ke-ds1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_orange" translatesAutoresizingMaskIntoConstraints="NO" id="aUq-pO-913">
-                                <rect key="frame" x="132" y="20" width="150" height="100"/>
+                                <rect key="frame" x="112.66666666666669" y="20" width="150" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aUq-pO-913" secondAttribute="height" multiplier="3:2" id="B9w-LR-2oc"/>
                                     <constraint firstAttribute="height" constant="100" id="Esd-Dq-RcV"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkP-rB-U6M">
-                                <rect key="frame" x="82" y="592" width="250" height="80"/>
+                                <rect key="frame" x="62.666666666666657" y="508" width="249.99999999999997" height="80"/>
                                 <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="NAl-CL-Ua9"/>
@@ -120,27 +120,27 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emailadres" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEc-6q-lch">
-                                <rect key="frame" x="16" y="282" width="382" height="30"/>
+                                <rect key="frame" x="16" y="240" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emailadres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxJ-TU-zpW">
-                                <rect key="frame" x="20" y="253" width="374" height="21"/>
+                                <rect key="frame" x="20" y="211" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wachtwoord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jLR-9g-2kv">
-                                <rect key="frame" x="16" y="363" width="382" height="30"/>
+                                <rect key="frame" x="16" y="321" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wachtwoord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tl-M8-NNt">
-                                <rect key="frame" x="20" y="334" width="374" height="21"/>
+                                <rect key="frame" x="20" y="292" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -173,7 +173,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="bEc-6q-lch" id="o8c-qa-rf1"/>
                         <outlet property="passwordTextField" destination="jLR-9g-2kv" id="FVo-2I-pYH"/>
-                        <segue destination="des-fx-crO" kind="presentation" identifier="loginToHome" modalTransitionStyle="crossDissolve" id="1O8-W1-yPI"/>
+                        <segue destination="des-fx-crO" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1O8-W1-yPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ttx-i4-fd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -185,17 +185,17 @@
             <objects>
                 <viewController title="Registreren" id="nyg-oF-Vti" customClass="SignupViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTL-xH-hoc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_green" translatesAutoresizingMaskIntoConstraints="NO" id="ccJ-Ne-zjZ">
-                                <rect key="frame" x="132" y="20" width="150" height="100"/>
+                                <rect key="frame" x="112.66666666666669" y="20" width="150" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="6DG-ZX-3xg"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-n7-lrb">
-                                <rect key="frame" x="82" y="592" width="250" height="80"/>
+                                <rect key="frame" x="62.666666666666657" y="508" width="249.99999999999997" height="80"/>
                                 <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="S8l-8r-MT9"/>
@@ -213,47 +213,47 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Emailadres" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XKe-Dq-Zs9">
-                                <rect key="frame" x="16" y="315.5" width="382" height="30"/>
+                                <rect key="frame" x="16" y="273.66666666666669" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emailadres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4W4-Lt-K9a">
-                                <rect key="frame" x="20" y="286.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="244.66666666666669" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wachtwoord" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bv0-15-fdv">
-                                <rect key="frame" x="16" y="396.5" width="382" height="30"/>
+                                <rect key="frame" x="16" y="354.66666666666669" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wachtwoord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dse-XH-2zQ">
-                                <rect key="frame" x="20" y="367.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="325.66666666666669" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wachtwoord herhalen" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i0M-PD-zv6">
-                                <rect key="frame" x="16" y="434.5" width="382" height="30"/>
+                                <rect key="frame" x="16" y="392.66666666666663" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Volledige naam" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mQk-OZ-uVW">
-                                <rect key="frame" x="16" y="234.5" width="382" height="30"/>
+                                <rect key="frame" x="16" y="192.66666666666669" width="343" height="30"/>
                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xx3-OX-gJ8">
-                                <rect key="frame" x="20" y="205.5" width="374" height="21"/>
+                                <rect key="frame" x="20" y="163.66666666666669" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -301,7 +301,7 @@
                         <outlet property="fullNameTextField" destination="mQk-OZ-uVW" id="dP0-bX-Dgi"/>
                         <outlet property="passwordConfirmTextField" destination="i0M-PD-zv6" id="MYF-xW-yb2"/>
                         <outlet property="passwordTextField" destination="Bv0-15-fdv" id="GU3-cO-WEM"/>
-                        <segue destination="des-fx-crO" kind="presentation" identifier="signupToHome" modalTransitionStyle="crossDissolve" id="CzA-wk-DHI"/>
+                        <segue destination="des-fx-crO" kind="presentation" identifier="signupToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CzA-wk-DHI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxG-gC-uxY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,7 +314,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vjr-q9-1u4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="qD3-QM-zIh">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -334,20 +334,20 @@
             </objects>
             <point key="canvasLocation" x="-404" y="198.35082458770617"/>
         </scene>
-        <!--Trajectcontroles-->
+        <!--AvgSpeedChecks-->
         <scene sceneID="0W3-Az-ndG">
             <objects>
-                <tableViewController id="5Q0-Ew-oWf" sceneMemberID="viewController">
+                <tableViewController title="AvgSpeedChecks" id="5Q0-Ew-oWf" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pVa-r1-fDo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TXG-eV-TQR">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TXG-eV-TQR" id="X4i-H6-r4O">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -357,26 +357,32 @@
                             <outlet property="delegate" destination="5Q0-Ew-oWf" id="7Fv-h5-E0h"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Trajectcontroles" id="Nm1-Kv-GlJ"/>
+                    <navigationItem key="navigationItem" title="Trajectcontroles" id="Nm1-Kv-GlJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dbj-pK-uJC">
+                            <connections>
+                                <segue destination="C3X-JQ-BK2" kind="presentation" modalPresentationStyle="formSheet" id="oGJ-pa-O53"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDc-UN-zqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4443" y="588"/>
         </scene>
-        <!--Controles-->
+        <!--PoliceChecks-->
         <scene sceneID="dXD-Wh-cn5">
             <objects>
-                <tableViewController id="vMo-3J-2sW" sceneMemberID="viewController">
+                <tableViewController title="PoliceChecks" id="vMo-3J-2sW" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ejb-4t-KyM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2KA-4c-gOQ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2KA-4c-gOQ" id="cPh-Fx-r7q">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -386,7 +392,13 @@
                             <outlet property="delegate" destination="vMo-3J-2sW" id="GdA-gr-55f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Controles" id="00P-9f-zlT"/>
+                    <navigationItem key="navigationItem" title="Controles" id="00P-9f-zlT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rvT-By-lhA">
+                            <connections>
+                                <segue destination="5X8-FP-cG3" kind="presentation" modalPresentationStyle="formSheet" id="Sjy-Aw-9a6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z14-oa-PgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -399,7 +411,7 @@
                     <tabBarItem key="tabBarItem" title="Flitsers" image="icon-speed-camera" id="V7Y-YK-HPj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="rBZ-Nc-oal">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -420,20 +432,20 @@
             </objects>
             <point key="canvasLocation" x="3535" y="-166"/>
         </scene>
-        <!--Flitsers-->
+        <!--SpeedCameras-->
         <scene sceneID="OQA-e5-URe">
             <objects>
-                <tableViewController id="wwh-X7-j8m" sceneMemberID="viewController">
+                <tableViewController title="SpeedCameras" id="wwh-X7-j8m" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="235-Id-Z7g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="06N-vP-8dW">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06N-vP-8dW" id="u11-xI-uwj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -443,11 +455,44 @@
                             <outlet property="delegate" destination="wwh-X7-j8m" id="P03-Ko-kGo"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Flitsers" id="108-te-DY1"/>
+                    <navigationItem key="navigationItem" title="Flitsers" id="108-te-DY1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XvA-yx-zJY">
+                            <connections>
+                                <segue destination="2sY-F9-Sf0" kind="presentation" modalPresentationStyle="formSheet" id="ff0-EF-Ca0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzZ-N6-MG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4443" y="-166"/>
+        </scene>
+        <!--AddSpeedCamera-->
+        <scene sceneID="KyY-Ky-EmR">
+            <objects>
+                <viewController title="AddSpeedCamera" id="S0O-FO-n8J" customClass="AddItemViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g5V-g1-Jxe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="G8x-Vr-K9U"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Flitser toevoegen" id="cIj-uj-A5r">
+                        <barButtonItem key="leftBarButtonItem" title="Annuleren" id="6pm-RS-GgO">
+                            <connections>
+                                <action selector="cancelAction:" destination="S0O-FO-n8J" id="xQx-83-5zL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="J36-e4-8Ak">
+                            <connections>
+                                <action selector="saveAction:" destination="S0O-FO-n8J" id="Wfe-Mi-Szl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xOx-4O-xDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6253.6000000000004" y="-166.25615763546799"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WS1-tY-gc6">
@@ -478,7 +523,7 @@
                     <tabBarItem key="tabBarItem" title="Trajectcontroles" image="icon-bullet-camera" id="nO2-EK-kMt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="LCn-Uj-ubf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,7 +551,7 @@
                     <tabBarItem key="tabBarItem" title="Controles" image="icon-policeman" id="utt-AT-L5U"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="UB0-JI-jbs">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -527,27 +572,27 @@
             </objects>
             <point key="canvasLocation" x="3535" y="1351"/>
         </scene>
-        <!--Instellingen-->
+        <!--Settings-->
         <scene sceneID="fsR-nK-gfq">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZV-NU-X7x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Pwa-uF-MkE" customClass="SettingsTableViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Settings" id="Pwa-uF-MkE" customClass="SettingsTableViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="3TP-hp-pGY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection headerTitle="App" id="KrR-bB-XoA">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="s4U-kQ-fl8" style="IBUITableViewCellStyleDefault" id="n8c-HC-s8K">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n8c-HC-s8K" id="ikh-B5-tZf">
-                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s4U-kQ-fl8">
-                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -555,20 +600,23 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="qFW-Py-u34" kind="show" id="ecp-kO-SRV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Profiel" id="Du2-Z8-H2e">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="KAG-MJ-w1X" style="IBUITableViewCellStyleDefault" id="2bQ-xh-lHM">
-                                        <rect key="frame" x="0.0" y="100" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2bQ-xh-lHM" id="bLp-zc-deH">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Wachtwoord wijzigen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KAG-MJ-w1X">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -578,10 +626,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OGx-wJ-GPZ">
-                                        <rect key="frame" x="0.0" y="144" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="144" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OGx-wJ-GPZ" id="zcS-Zk-Gtn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cep-j3-yHf">
@@ -620,6 +668,21 @@
             </objects>
             <point key="canvasLocation" x="4443.4782608695659" y="2106.0267857142858"/>
         </scene>
+        <!--Info-->
+        <scene sceneID="nxN-BQ-5Ph">
+            <objects>
+                <viewController title="Info" id="qFW-Py-u34" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JlG-nh-aqS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hRx-JT-c5Z"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAE-jU-xXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5345" y="2106"/>
+        </scene>
         <!--Instellingen-->
         <scene sceneID="vNV-WO-41d">
             <objects>
@@ -627,8 +690,10 @@
                     <tabBarItem key="tabBarItem" title="Instellingen" image="icon-settings" id="cGQ-0v-Lc2"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="hjX-Z3-VhB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -646,15 +711,123 @@
             </objects>
             <point key="canvasLocation" x="3534.7826086956525" y="2105.3571428571427"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7nv-dS-wxj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2sY-F9-Sf0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kye-fq-HsO">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S0O-FO-n8J" kind="relationship" relationship="rootViewController" id="Qbr-4m-tVP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxw-1a-aEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5344.9275362318849" y="-166.07142857142856"/>
+        </scene>
+        <!--AddAvgSpeedCheck-->
+        <scene sceneID="zuL-F3-gFM">
+            <objects>
+                <viewController title="AddAvgSpeedCheck" id="Qah-wv-6bo" customClass="AddItemViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ekD-tZ-Ofo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oTc-NH-WnU"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trajectcontrole toevoegen" id="oLT-Kb-b0U">
+                        <barButtonItem key="leftBarButtonItem" title="Annuleren" id="TIC-YF-ExB">
+                            <connections>
+                                <action selector="cancelAction:" destination="Qah-wv-6bo" id="5db-td-eVo"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="S2I-ZY-Ye4">
+                            <connections>
+                                <action selector="saveAction:" destination="Qah-wv-6bo" id="kl4-kI-Qzo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFD-xd-Xw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6254" y="587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7lq-Ud-MhW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C3X-JQ-BK2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z7N-bm-pTC">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qah-wv-6bo" kind="relationship" relationship="rootViewController" id="2Ql-Ts-IfN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKb-bt-2Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5345" y="587"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LpS-QB-YOc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5X8-FP-cG3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tSO-hr-NST">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sdC-3v-DxL" kind="relationship" relationship="rootViewController" id="Rxo-Uh-6k5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ei-ao-HgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5345" y="1351"/>
+        </scene>
+        <!--AddPoliceCheck-->
+        <scene sceneID="6Bf-Ux-W5W">
+            <objects>
+                <viewController title="AddPoliceCheck" id="sdC-3v-DxL" customClass="AddItemViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hmA-Gh-iFR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aKt-wA-pTh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Controle toevoegen" id="r5M-Xn-kwV">
+                        <barButtonItem key="leftBarButtonItem" title="Annuleren" id="pLi-3X-G6W">
+                            <connections>
+                                <action selector="cancelAction:" destination="sdC-3v-DxL" id="qA7-1A-Fzj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Opslaan" id="wkB-Tu-mqh">
+                            <connections>
+                                <action selector="saveAction:" destination="sdC-3v-DxL" id="5fb-OO-q3A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q4G-Ub-FKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6254" y="1351"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Police_man_car" width="1141.9200439453125" height="492"/>
         <image name="car_green" width="409.60000610351562" height="409.60000610351562"/>
         <image name="car_orange" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="icon-bullet-camera" width="37.5" height="37.5"/>
-        <image name="icon-policeman" width="37.5" height="37.5"/>
-        <image name="icon-settings" width="37.5" height="37.5"/>
-        <image name="icon-speed-camera" width="37.5" height="37.5"/>
+        <image name="icon-bullet-camera" width="56.25" height="56.25"/>
+        <image name="icon-policeman" width="56.25" height="56.25"/>
+        <image name="icon-settings" width="56.25" height="56.25"/>
+        <image name="icon-speed-camera" width="56.25" height="56.25"/>
         <image name="icon_Circular" width="1024.3199462890625" height="1024.3199462890625"/>
     </resources>
     <inferredMetricsTieBreakers>
