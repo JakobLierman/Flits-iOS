@@ -1,5 +1,5 @@
 //
-//  AddItemViewController.swift
+//  AddPoliceCheckViewController.swift
 //  Flits
 //
 //  Created by Jakob Lierman on 24/12/2018.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class AddItemViewController: UIViewController {
+class AddPoliceCheckViewController: UIViewController {
+    
+    // MARK: Properties
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,9 @@ class AddItemViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         // TODO - Implement
+        self.dismiss(animated: true, completion: nil)
     }
-    
+
     /*
     // MARK: - Navigation
 
