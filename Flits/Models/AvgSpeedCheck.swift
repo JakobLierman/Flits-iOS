@@ -1,5 +1,5 @@
 //
-//  SpeedCamera.swift
+//  AvgSpeedCheck.swift
 //  Flits
 //
 //  Created by Jakob Lierman on 24/12/2018.
@@ -8,24 +8,22 @@
 
 import Foundation
 
-struct SpeedCamera {
+struct AvgSpeedCheck {
     
     // MARK: Properties
-    let location: String
+    let beginLocation: String
+    let endLocation: String
     var details: String?
-    var imagePath: String?
     let timeCreated: Date
-    var expireDate: Date?
     
     // MARK: Constructors
-    init(location: String, details: String? = nil, imagePath: String? = nil, expireDate: Date? = nil) {
+    init(beginLocation: String, endLocation: String, details: String? = nil) {
         self.timeCreated = Date()
-        self.location = location
+        self.beginLocation = beginLocation
+        self.endLocation = endLocation
         self.details = details
-        self.imagePath = imagePath
-        self.expireDate = expireDate
     }
     
     // MARK: Functions
-    
+
 }

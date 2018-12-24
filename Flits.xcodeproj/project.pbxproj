@@ -18,6 +18,8 @@
 		36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */; };
 		36D9641E21D04D54004CC1A2 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */; };
 		36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9642521D052BD004CC1A2 /* SpeedCamera.swift */; };
+		36D9642A21D06371004CC1A2 /* AvgSpeedCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9642921D06371004CC1A2 /* AvgSpeedCheck.swift */; };
+		36D9642C21D06406004CC1A2 /* PoliceCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9642B21D06406004CC1A2 /* PoliceCheck.swift */; };
 		BA5D196BC3A911C8BA19BA18 /* Pods_Flits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB7AC9457CC8DA2AD9C31CA /* Pods_Flits.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		36D9641D21D04D54004CC1A2 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		36D9642521D052BD004CC1A2 /* SpeedCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamera.swift; sourceTree = "<group>"; };
+		36D9642921D06371004CC1A2 /* AvgSpeedCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvgSpeedCheck.swift; sourceTree = "<group>"; };
+		36D9642B21D06406004CC1A2 /* PoliceCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceCheck.swift; sourceTree = "<group>"; };
 		6AB7AC9457CC8DA2AD9C31CA /* Pods_Flits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AA675416D5D9106723F2E5D /* Pods-Flits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.release.xcconfig"; sourceTree = "<group>"; };
 		E33F5E524D261E3284CB3F1A /* Pods-Flits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flits.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flits/Pods-Flits.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				36D9642521D052BD004CC1A2 /* SpeedCamera.swift */,
+				36D9642921D06371004CC1A2 /* AvgSpeedCheck.swift */,
+				36D9642B21D06406004CC1A2 /* PoliceCheck.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 				36A39B8E21CBE55800AF5C15 /* LoginViewController.swift in Sources */,
 				36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */,
 				36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */,
+				36D9642C21D06406004CC1A2 /* PoliceCheck.swift in Sources */,
+				36D9642A21D06371004CC1A2 /* AvgSpeedCheck.swift in Sources */,
 				36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */,
 				36A39B9021CBE57B00AF5C15 /* SignupViewController.swift in Sources */,
 				36A39B7421CBDF2700AF5C15 /* AppDelegate.swift in Sources */,
