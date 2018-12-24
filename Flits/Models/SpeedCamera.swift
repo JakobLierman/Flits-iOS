@@ -8,13 +8,15 @@
 
 import Foundation
 
-struct SpeedCamera {
+class SpeedCamera: Item {
 
     // MARK: Properties
     let location: String
     let kind: String
     var description: String?
     var imagePath: String?
+    var likes: Set<String>
+    var dislikes: Set<String>
     let timeCreated: Date
     var expireDate: Date?
 
@@ -25,11 +27,13 @@ struct SpeedCamera {
         self.kind = kind
         self.description = description
         self.imagePath = imagePath
+        self.likes = []
+        self.dislikes = []
         self.expireDate = calculateExpireDate()
     }
 
     // MARK: Functions
-    func calculateExpireDate() -> Date? {
+    private func calculateExpireDate() -> Date? {
         let expireDate: Date?
         switch kind {
         case "Vaste flitspaal":
@@ -42,6 +46,32 @@ struct SpeedCamera {
             expireDate = Date(timeInterval: 604800, since: timeCreated)
         }
         return expireDate
+    }
+    
+    func getLikes() -> Int {
+        return likes.count
+    }
+    
+    func getDislikes() -> Int {
+        return dislikes.count
+    }
+    
+    func like(userUid: String) {
+        // TODO
+        // Check if user already liked
+        // like
+    }
+    
+    func dislike(userUid: String) {
+        // TODO
+        // Check if user already liked
+        // dislike
+    }
+    
+    func removeLike(userUid: String) {
+        // TODO
+        // Check if user already liked
+        // remove (dis)like
     }
 
 }

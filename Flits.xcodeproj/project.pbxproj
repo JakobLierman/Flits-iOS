@@ -17,6 +17,7 @@
 		36A39B9921CBE76300AF5C15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A39B9721CBE76300AF5C15 /* Main.storyboard */; };
 		36BD9BDC21D119A30033542D /* AddAvgSpeedCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BD9BDB21D119A30033542D /* AddAvgSpeedCheckViewController.swift */; };
 		36BD9BDE21D119E80033542D /* AddPoliceCheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BD9BDD21D119E80033542D /* AddPoliceCheckViewController.swift */; };
+		36BD9BE021D146E40033542D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36BD9BDF21D146E40033542D /* Item.swift */; };
 		36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */; };
 		36D9641E21D04D54004CC1A2 /* AddSpeedCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9641D21D04D54004CC1A2 /* AddSpeedCameraViewController.swift */; };
 		36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9642521D052BD004CC1A2 /* SpeedCamera.swift */; };
@@ -40,6 +41,7 @@
 		36A39B9F21CFCD5F00AF5C15 /* nl-BE */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-BE"; path = "nl-BE.lproj/Main.strings"; sourceTree = "<group>"; };
 		36BD9BDB21D119A30033542D /* AddAvgSpeedCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAvgSpeedCheckViewController.swift; sourceTree = "<group>"; };
 		36BD9BDD21D119E80033542D /* AddPoliceCheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPoliceCheckViewController.swift; sourceTree = "<group>"; };
+		36BD9BDF21D146E40033542D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		36D9641D21D04D54004CC1A2 /* AddSpeedCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpeedCameraViewController.swift; sourceTree = "<group>"; };
 		36D9642521D052BD004CC1A2 /* SpeedCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamera.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				36D9642521D052BD004CC1A2 /* SpeedCamera.swift */,
 				36D9642921D06371004CC1A2 /* AvgSpeedCheck.swift */,
 				36D9642B21D06406004CC1A2 /* PoliceCheck.swift */,
+				36BD9BDF21D146E40033542D /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */,
 				36BD9BDE21D119E80033542D /* AddPoliceCheckViewController.swift in Sources */,
 				36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */,
+				36BD9BE021D146E40033542D /* Item.swift in Sources */,
 				36D9642C21D06406004CC1A2 /* PoliceCheck.swift in Sources */,
 				36D9642A21D06371004CC1A2 /* AvgSpeedCheck.swift in Sources */,
 				36D9642621D052BD004CC1A2 /* SpeedCamera.swift in Sources */,
