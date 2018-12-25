@@ -36,21 +36,18 @@ class AvgSpeedCheck: Item {
     }
     
     func like(userUid: String) {
-        // TODO
-        // Check if user already liked
-        // like
+        removeLike(userUid: userUid)
+        likes.insert(userUid)
     }
     
     func dislike(userUid: String) {
-        // TODO
-        // Check if user already liked
-        // dislike
+        removeLike(userUid: userUid)
+        dislikes.insert(userUid)
     }
     
     func removeLike(userUid: String) {
-        // TODO
-        // Check if user already liked
-        // remove (dis)like
+        likes.remove(userUid)
+        dislikes.remove(userUid)
     }
 
 }
