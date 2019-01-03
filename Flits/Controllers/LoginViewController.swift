@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    // MARK: Properties
+    // MARK: - Properties
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    // MARK: Actions
+    // MARK: - Actions
     @IBAction func logInAction(_ sender: UIButton) {
         // Log user in
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
@@ -37,6 +37,16 @@ class LoginViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         }
+    }
+    
+    // MARK: - Controlling the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTextField {
+            passwordTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 
     /*

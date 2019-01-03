@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-class SignupViewController: UIViewController {
+class SignupViewController: UIViewController, UITextFieldDelegate {
     
-    // MARK: Properties
+    // MARK: - Properties
     @IBOutlet weak var fullNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,7 +23,7 @@ class SignupViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    // MARK: Actions
+    // MARK: - Actions
     @IBAction func signUpAction(_ sender: UIButton) {
         // Check if passwords match
         if passwordTextField.text != passwordConfirmTextField.text {
@@ -57,6 +57,12 @@ class SignupViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    // MARK: - Controlling the keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     /*
