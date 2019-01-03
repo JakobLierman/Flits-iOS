@@ -372,95 +372,6 @@
             </objects>
             <point key="canvasLocation" x="-404" y="198.35082458770617"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="mnk-tx-Ziz">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="heU-DB-fIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Cej-Rb-ig0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FQy-qd-8g0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spc-Dc-DJr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i7X-PL-ZaA">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="950"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Police_man_car" translatesAutoresizingMaskIntoConstraints="NO" id="zB5-Vf-4NE">
-                                                <rect key="frame" x="87" y="22" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="Klt-0b-Cfz"/>
-                                                    <constraint firstAttribute="height" constant="128" id="d7g-Dz-8TH"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bullet-camera" translatesAutoresizingMaskIntoConstraints="NO" id="B41-cr-Me5">
-                                                <rect key="frame" x="87" y="794" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="qF5-1j-VQQ"/>
-                                                    <constraint firstAttribute="width" constant="240" id="zFz-Ji-GOp"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_orange" translatesAutoresizingMaskIntoConstraints="NO" id="WRs-Pv-QXu">
-                                                <rect key="frame" x="87" y="601" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="Qdw-Zf-AOh"/>
-                                                    <constraint firstAttribute="width" constant="240" id="uKc-hu-gOZ"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_green" translatesAutoresizingMaskIntoConstraints="NO" id="hsd-2w-dZl">
-                                                <rect key="frame" x="87" y="411" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="J3J-Ev-e7i"/>
-                                                    <constraint firstAttribute="height" constant="128" id="L7G-3m-3WF"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_blue" translatesAutoresizingMaskIntoConstraints="NO" id="v89-DO-6kJ">
-                                                <rect key="frame" x="87" y="205" width="240" height="128"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="128" id="Czp-K9-9kt"/>
-                                                    <constraint firstAttribute="width" constant="240" id="TKM-nx-vjE"/>
-                                                </constraints>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="B41-cr-Me5" secondAttribute="bottom" constant="28" id="59O-5Z-elB"/>
-                                            <constraint firstItem="B41-cr-Me5" firstAttribute="top" secondItem="WRs-Pv-QXu" secondAttribute="bottom" constant="65" id="7tb-K2-QPY"/>
-                                            <constraint firstItem="B41-cr-Me5" firstAttribute="centerX" secondItem="i7X-PL-ZaA" secondAttribute="centerX" id="AiR-zv-YiA"/>
-                                            <constraint firstItem="v89-DO-6kJ" firstAttribute="top" secondItem="zB5-Vf-4NE" secondAttribute="bottom" constant="55" id="Dqm-5l-uLi"/>
-                                            <constraint firstItem="hsd-2w-dZl" firstAttribute="top" secondItem="v89-DO-6kJ" secondAttribute="bottom" constant="78" id="Q6Y-0C-ZNo"/>
-                                            <constraint firstItem="v89-DO-6kJ" firstAttribute="centerX" secondItem="i7X-PL-ZaA" secondAttribute="centerX" id="Vb3-A5-bb8"/>
-                                            <constraint firstItem="hsd-2w-dZl" firstAttribute="centerX" secondItem="i7X-PL-ZaA" secondAttribute="centerX" id="Xt8-B7-zUD"/>
-                                            <constraint firstItem="zB5-Vf-4NE" firstAttribute="top" secondItem="i7X-PL-ZaA" secondAttribute="top" constant="22" id="Y6d-qp-b2R"/>
-                                            <constraint firstItem="WRs-Pv-QXu" firstAttribute="top" secondItem="hsd-2w-dZl" secondAttribute="bottom" constant="62" id="nHi-Ke-iIK"/>
-                                            <constraint firstItem="WRs-Pv-QXu" firstAttribute="centerX" secondItem="i7X-PL-ZaA" secondAttribute="centerX" id="nrD-ZY-9Cw"/>
-                                            <constraint firstItem="zB5-Vf-4NE" firstAttribute="centerX" secondItem="i7X-PL-ZaA" secondAttribute="centerX" id="vrE-sC-g6b"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="i7X-PL-ZaA" firstAttribute="width" secondItem="spc-Dc-DJr" secondAttribute="width" id="Lww-nt-sqh"/>
-                                    <constraint firstItem="i7X-PL-ZaA" firstAttribute="leading" secondItem="spc-Dc-DJr" secondAttribute="leading" id="VBd-yd-Gys"/>
-                                    <constraint firstAttribute="bottom" secondItem="i7X-PL-ZaA" secondAttribute="bottom" id="ZIT-U5-L6v"/>
-                                    <constraint firstItem="i7X-PL-ZaA" firstAttribute="top" secondItem="spc-Dc-DJr" secondAttribute="top" id="asy-9l-4hY"/>
-                                    <constraint firstAttribute="trailing" secondItem="i7X-PL-ZaA" secondAttribute="trailing" id="q6I-IY-VPf"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="spc-Dc-DJr" firstAttribute="top" secondItem="FQy-qd-8g0" secondAttribute="top" id="Dnb-XP-TH5"/>
-                            <constraint firstItem="spc-Dc-DJr" firstAttribute="leading" secondItem="WuS-30-PrS" secondAttribute="leading" id="KCf-ah-bxu"/>
-                            <constraint firstItem="spc-Dc-DJr" firstAttribute="trailing" secondItem="WuS-30-PrS" secondAttribute="trailing" id="hWa-mh-4Nh"/>
-                            <constraint firstAttribute="bottom" secondItem="spc-Dc-DJr" secondAttribute="bottom" id="kMN-XL-bZC"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WuS-30-PrS"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-594.20289855072474" y="1137.7232142857142"/>
-        </scene>
         <!--AvgSpeedChecks-->
         <scene sceneID="0W3-Az-ndG">
             <objects>
@@ -1148,7 +1059,6 @@
     </scenes>
     <resources>
         <image name="Police_man_car" width="1141.9200439453125" height="492"/>
-        <image name="car_blue" width="409.60000610351562" height="409.60000610351562"/>
         <image name="car_green" width="409.60000610351562" height="409.60000610351562"/>
         <image name="car_orange" width="409.60000610351562" height="409.60000610351562"/>
         <image name="icon-bullet-camera" width="37.5" height="37.5"/>
