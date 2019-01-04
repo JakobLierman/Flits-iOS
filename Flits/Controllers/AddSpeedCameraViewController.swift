@@ -22,6 +22,7 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     var imagePicker: UIImagePickerController!
     @IBOutlet weak var selectImageButton: UIButton!
     weak var activeField: UITextField?
+    var hasImage: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,13 +91,15 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
         // Write instance to database
         
         // Get item ID
-        //let itemId // TODO
+        let itemId = "test" // TODO
         
-        // Create imagePath and imageName
-        //let imagePath = "images/\(itemId).jpg"
-        
-        // Upload image
-        // TODO
+        if hasImage {
+            // Create imagePath and imageName
+            let imagePath = "images/\(itemId).jpg"
+            let image = imageView.image
+            // Upload image
+            uploadImage(image: image!, path: imagePath)
+        }
         
         self.dismiss(animated: true, completion: nil)
     }
@@ -105,15 +108,17 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
         present(imagePicker, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Upload image
+    private func uploadImage(image: UIImage, path: String) {
+        let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+        var data = NSData()
+        data = image.jpegData(compressionQuality: 0.8)! as NSData
+        let childUserImages = storageRef.child(path)
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        // Upload
+        childUserImages.putData(data as Data, metadata: metaData)
     }
-    */
 
     // Number of columns of data
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -135,6 +140,7 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
+            hasImage = true
             
             // Change button and image settings
             selectImageButton.setTitle("", for: .normal)
@@ -142,4 +148,14 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
 }
