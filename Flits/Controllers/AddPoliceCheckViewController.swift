@@ -24,6 +24,10 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
 
         // Do any additional setup after loading the view.
         
+        // Init imagePicker
+        self.imagePicker = UIImagePickerController()
+        self.imagePicker.delegate = self
+        
         // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -64,6 +68,18 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
         self.scrollView.scrollIndicatorInsets = contentInsets
     }
     
+    // Select image and show in imageView
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.image = image
+            
+            // Change button and image settings
+            selectImageButton.setTitle("", for: .normal)
+            imageView.contentMode = .scaleAspectFit
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: Actions
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -72,6 +88,10 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     @IBAction func saveAction(_ sender: Any) {
         // TODO - Implement
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectImageAction(_ sender: Any) {
+        present(imagePicker, animated: true, completion: nil)
     }
 
     /*
