@@ -435,7 +435,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDc-UN-zqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4443" y="588"/>
+            <point key="canvasLocation" x="4519" y="-738"/>
         </scene>
         <!--PoliceChecks-->
         <scene sceneID="dXD-Wh-cn5">
@@ -470,70 +470,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z14-oa-PgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4443" y="1351"/>
-        </scene>
-        <!--Flitsers-->
-        <scene sceneID="Gaw-um-sVN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yim-lo-hDK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Flitsers" image="icon-speed-camera" id="V7Y-YK-HPj"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="rBZ-Nc-oal">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="wwh-X7-j8m" kind="relationship" relationship="rootViewController" id="hgc-Z2-hzC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hyj-RP-Azy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3535" y="-166"/>
-        </scene>
-        <!--SpeedCameras-->
-        <scene sceneID="OQA-e5-URe">
-            <objects>
-                <tableViewController title="SpeedCameras" id="wwh-X7-j8m" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="235-Id-Z7g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="06N-vP-8dW">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="06N-vP-8dW" id="u11-xI-uwj">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="wwh-X7-j8m" id="YeT-fQ-2HB"/>
-                            <outlet property="delegate" destination="wwh-X7-j8m" id="P03-Ko-kGo"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Flitsers" id="108-te-DY1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XvA-yx-zJY">
-                            <connections>
-                                <segue destination="2sY-F9-Sf0" kind="presentation" modalPresentationStyle="formSheet" id="ff0-EF-Ca0"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TzZ-N6-MG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4443" y="-166"/>
+            <point key="canvasLocation" x="4519" y="589"/>
         </scene>
         <!--AddSpeedCamera-->
         <scene sceneID="KyY-Ky-EmR">
@@ -711,7 +648,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOx-4O-xDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6252.1739130434789" y="-166.74107142857142"/>
+            <point key="canvasLocation" x="7255" y="-2185"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WS1-tY-gc6">
@@ -725,7 +662,7 @@
                         <color key="selectedImageTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Yim-lo-hDK" kind="relationship" relationship="viewControllers" id="aKy-2n-OY5"/>
+                        <segue destination="A3V-Rd-rNp" kind="relationship" relationship="viewControllers" id="Frb-E2-vxF"/>
                         <segue destination="ss6-e1-GJA" kind="relationship" relationship="viewControllers" id="bA0-0c-3Ce"/>
                         <segue destination="bHt-hJ-gqe" kind="relationship" relationship="viewControllers" id="Dcm-XY-ii8"/>
                         <segue destination="SfZ-i8-kOs" kind="relationship" relationship="viewControllers" id="Jsi-vm-iUC"/>
@@ -761,7 +698,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ji-Pl-9gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="588"/>
+            <point key="canvasLocation" x="3612" y="-738"/>
         </scene>
         <!--Controles-->
         <scene sceneID="Q7R-Wt-NCE">
@@ -789,7 +726,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="672-Dw-go5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="1351"/>
+            <point key="canvasLocation" x="3612" y="589"/>
         </scene>
         <!--Settings-->
         <scene sceneID="fsR-nK-gfq">
@@ -889,7 +826,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="4443" y="2085"/>
+            <point key="canvasLocation" x="4522" y="2004"/>
         </scene>
         <!--Info-->
         <scene sceneID="nxN-BQ-5Ph">
@@ -929,7 +866,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAE-jU-xXV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5345" y="2084"/>
+            <point key="canvasLocation" x="5425" y="2004"/>
         </scene>
         <!--Instellingen-->
         <scene sceneID="vNV-WO-41d">
@@ -957,7 +894,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEM-Vl-Wi9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3535" y="2084"/>
+            <point key="canvasLocation" x="3614" y="2004"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7nv-dS-wxj">
@@ -975,7 +912,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxw-1a-aEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5344.9275362318849" y="-166.07142857142856"/>
+            <point key="canvasLocation" x="6329" y="-2185"/>
         </scene>
         <!--AddAvgSpeedCheck-->
         <scene sceneID="zuL-F3-gFM">
@@ -1081,7 +1018,127 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFD-xd-Xw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6252.1739130434789" y="585.9375"/>
+            <point key="canvasLocation" x="6329" y="-740"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W5D-3Y-H8i">
+            <objects>
+                <navigationController id="JM6-dt-sGb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xj0-Zf-9ug">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eOB-Ez-QrL" kind="relationship" relationship="rootViewController" id="7EZ-8P-URx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgD-57-swv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4519" y="-1498"/>
+        </scene>
+        <!--Speed Camera Detail View Controller-->
+        <scene sceneID="4rx-Ce-g3b">
+            <objects>
+                <viewController id="eOB-Ez-QrL" customClass="SpeedCameraDetailViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0O-2X-qlV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, wordl!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZw-Rc-1ar">
+                                <rect key="frame" x="159.5" y="437.5" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HZw-Rc-1ar" firstAttribute="centerX" secondItem="O0O-2X-qlV" secondAttribute="centerX" id="5Hg-QA-YSx"/>
+                            <constraint firstItem="HZw-Rc-1ar" firstAttribute="centerY" secondItem="O0O-2X-qlV" secondAttribute="centerY" id="wBK-pV-BFj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XT5-nG-Kte"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xpp-rj-4V4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBM-kz-IE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5422" y="-1499"/>
+        </scene>
+        <!--Flitsers-->
+        <scene sceneID="1Re-6b-NiH">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="rau-FU-4Re" customClass="SpeedCamerasTableViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LvW-yz-yUf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpeedCameraCell" textLabel="55x-M0-Pux" style="IBUITableViewCellStyleDefault" id="HRC-92-XkQ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HRC-92-XkQ" id="9pL-vv-Tio">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="55x-M0-Pux">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rau-FU-4Re" id="ohp-CD-lFv"/>
+                            <outlet property="delegate" destination="rau-FU-4Re" id="kUf-5g-oCB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Flitsers" id="tEW-RI-dhQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="g4R-Ge-zdx">
+                            <connections>
+                                <segue destination="2sY-F9-Sf0" kind="presentation" modalPresentationStyle="formSheet" id="rno-HR-wnQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwf-I0-6Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5422" y="-2185"/>
+        </scene>
+        <!--Flitsers-->
+        <scene sceneID="8Sd-XK-T7R">
+            <objects>
+                <navigationController id="wUN-u4-OgJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Flitsers" image="icon-speed-camera" id="Uiu-oq-Zy0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8f6-Gu-KyY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rau-FU-4Re" kind="relationship" relationship="rootViewController" id="H8I-tZ-Jxd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhd-B3-q1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4519" y="-2185"/>
+        </scene>
+        <!--Flitsers-->
+        <scene sceneID="Ebs-BK-7VV">
+            <objects>
+                <splitViewController id="A3V-Rd-rNp" customClass="SplitViewController" customModule="Flits" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Flitsers" image="icon-speed-camera" id="PZp-yz-ymh"/>
+                    <navigationItem key="navigationItem" id="byl-Uj-hYR"/>
+                    <connections>
+                        <segue destination="wUN-u4-OgJ" kind="relationship" relationship="masterViewController" id="evG-3A-efb"/>
+                        <segue destination="JM6-dt-sGb" kind="relationship" relationship="detailViewController" id="Q2l-oW-Csb"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcH-T5-Eap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3613" y="-1864"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7lq-Ud-MhW">
@@ -1099,7 +1156,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKb-bt-2Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5345" y="587"/>
+            <point key="canvasLocation" x="5422" y="-739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LpS-QB-YOc">
@@ -1117,7 +1174,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ei-ao-HgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5345" y="1351"/>
+            <point key="canvasLocation" x="5422" y="589"/>
         </scene>
         <!--AddPoliceCheck-->
         <scene sceneID="6Bf-Ux-W5W">
@@ -1276,7 +1333,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4G-Ub-FKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6253.6231884057979" y="1350.6696428571429"/>
+            <point key="canvasLocation" x="6330" y="589"/>
         </scene>
     </scenes>
     <resources>
@@ -1291,7 +1348,7 @@
         <image name="icon_Circular" width="1024.3199462890625" height="1024.3199462890625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1O8-W1-yPI"/>
+        <segue reference="O7N-Pq-b7q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

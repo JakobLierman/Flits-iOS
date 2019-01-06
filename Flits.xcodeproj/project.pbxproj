@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3631224B21E2849A008D9B70 /* SpeedCameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631224A21E2849A008D9B70 /* SpeedCameraDetailViewController.swift */; };
+		3631225221E2A626008D9B70 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631225121E2A626008D9B70 /* SplitViewController.swift */; };
+		368B065421E2704D00C0ED9A /* SpeedCamerasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */; };
 		36A39B7421CBDF2700AF5C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */; };
 		36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A39B7521CBDF2700AF5C15 /* StartViewController.swift */; };
 		36A39B7B21CBDF2900AF5C15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36A39B7A21CBDF2900AF5C15 /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3631224A21E2849A008D9B70 /* SpeedCameraDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCameraDetailViewController.swift; sourceTree = "<group>"; };
+		3631225121E2A626008D9B70 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamerasTableViewController.swift; sourceTree = "<group>"; };
 		36A39B7021CBDF2700AF5C15 /* Flits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A39B7521CBDF2700AF5C15 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3631224D21E2874F008D9B70 /* SpeedCamera */ = {
+			isa = PBXGroup;
+			children = (
+				36D9641D21D04D54004CC1A2 /* AddSpeedCameraViewController.swift */,
+				368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */,
+				3631224A21E2849A008D9B70 /* SpeedCameraDetailViewController.swift */,
+			);
+			name = SpeedCamera;
+			sourceTree = "<group>";
+		};
+		3631224F21E28764008D9B70 /* AvgSpeedCheck */ = {
+			isa = PBXGroup;
+			children = (
+				36BD9BDB21D119A30033542D /* AddAvgSpeedCheckViewController.swift */,
+			);
+			name = AvgSpeedCheck;
+			sourceTree = "<group>";
+		};
+		3631225021E28776008D9B70 /* PoliceCheck */ = {
+			isa = PBXGroup;
+			children = (
+				36BD9BDD21D119E80033542D /* AddPoliceCheckViewController.swift */,
+			);
+			name = PoliceCheck;
+			sourceTree = "<group>";
+		};
 		36A39B6721CBDF2700AF5C15 = {
 			isa = PBXGroup;
 			children = (
@@ -107,13 +139,14 @@
 		36D9641F21D0512D004CC1A2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3631225021E28776008D9B70 /* PoliceCheck */,
+				3631224F21E28764008D9B70 /* AvgSpeedCheck */,
+				3631224D21E2874F008D9B70 /* SpeedCamera */,
 				36A39B7521CBDF2700AF5C15 /* StartViewController.swift */,
-				36D9641D21D04D54004CC1A2 /* AddSpeedCameraViewController.swift */,
 				36A39B8D21CBE55800AF5C15 /* LoginViewController.swift */,
 				36A39B8F21CBE57B00AF5C15 /* SignupViewController.swift */,
 				36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */,
-				36BD9BDB21D119A30033542D /* AddAvgSpeedCheckViewController.swift */,
-				36BD9BDD21D119E80033542D /* AddPoliceCheckViewController.swift */,
+				3631225121E2A626008D9B70 /* SplitViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,6 +286,9 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -267,6 +303,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -308,8 +347,10 @@
 			files = (
 				36A39B8E21CBE55800AF5C15 /* LoginViewController.swift in Sources */,
 				36D9641C21D0391C004CC1A2 /* SettingsTableViewController.swift in Sources */,
+				3631224B21E2849A008D9B70 /* SpeedCameraDetailViewController.swift in Sources */,
 				36BD9BDE21D119E80033542D /* AddPoliceCheckViewController.swift in Sources */,
 				36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */,
+				3631225221E2A626008D9B70 /* SplitViewController.swift in Sources */,
 				36BD9BE021D146E40033542D /* Item.swift in Sources */,
 				36D9642C21D06406004CC1A2 /* PoliceCheck.swift in Sources */,
 				36D9642A21D06371004CC1A2 /* AvgSpeedCheck.swift in Sources */,
@@ -318,6 +359,7 @@
 				36A39B9021CBE57B00AF5C15 /* SignupViewController.swift in Sources */,
 				36A39B7421CBDF2700AF5C15 /* AppDelegate.swift in Sources */,
 				36D9641E21D04D54004CC1A2 /* AddSpeedCameraViewController.swift in Sources */,
+				368B065421E2704D00C0ED9A /* SpeedCamerasTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
