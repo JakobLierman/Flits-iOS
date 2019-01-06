@@ -40,14 +40,14 @@ class AvgSpeedCheck: Item, ImmutableMappable {
         userID          = try map.value("user")
         likes           = (try? map.value("likes")) ?? []
         dislikes        = (try? map.value("dislikes")) ?? []
-        timeCreated     = try map.value("timeCreated", using:DateTransform())
+        timeCreated     = try map.value("timeCreated", using: ISO8601DateTransform())
     }
     
     func mapping(map: Map) {
         beginLocation   >>> map["beginLocation"]
         endLocation     >>> map["endLocation"]
         userID          >>> map["user"]
-        timeCreated     >>> (map["timeCreated"], DateTransform())
+        timeCreated     >>> (map["timeCreated"], ISO8601DateTransform())
     }
     
     // MARK: - Functions
@@ -74,7 +74,7 @@ class AvgSpeedCheck: Item, ImmutableMappable {
         dislikes.remove(userId)
     }
     
-    func toDatabase() -> DocumentReference {
+    @discardableResult func toDatabase() -> DocumentReference {
         // Data from object in JSON
         let data = self.toJSON()
         // Upload data to database

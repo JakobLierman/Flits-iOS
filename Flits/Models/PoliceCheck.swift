@@ -45,8 +45,8 @@ class PoliceCheck: Item, ImmutableMappable {
         userID          = try map.value("user")
         likes           = (try? map.value("likes")) ?? []
         dislikes        = (try? map.value("dislikes")) ?? []
-        timeCreated     = try map.value("timeCreated", using:DateTransform())
-        expireDate      = try map.value("expireDate", using:DateTransform())
+        timeCreated     = try map.value("timeCreated", using: ISO8601DateTransform())
+        expireDate      = try map.value("expireDate", using: ISO8601DateTransform())
     }
     
     func mapping(map: Map) {
@@ -54,8 +54,8 @@ class PoliceCheck: Item, ImmutableMappable {
         descriptionText >>> map["description"]
         imagePath       >>> map["image"]
         userID          >>> map["user"]
-        timeCreated     >>> (map["timeCreated"], DateTransform())
-        expireDate      >>> (map["expireDate"], DateTransform())
+        timeCreated     >>> (map["timeCreated"], ISO8601DateTransform())
+        expireDate      >>> (map["expireDate"], ISO8601DateTransform())
     }
     
     // MARK: - Functions
