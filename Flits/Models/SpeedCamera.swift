@@ -13,20 +13,22 @@ class SpeedCamera: Item {
     // MARK: Properties
     let location: String
     let kind: String
-    var description: String?
+    var descriptionText: String?
     var imagePath: String?
+    let userID: String
     var likes: Set<String>
     var dislikes: Set<String>
     let timeCreated: Date
     var expireDate: Date?
 
-    // MARK: Constructors
-    init(location: String, kind: String, description: String? = nil, imagePath: String? = nil) {
+    // MARK: - Constructors
+    init(location: String, kind: String, descriptionText: String? = nil, imagePath: String? = nil) {
         self.timeCreated = Date()
         self.location = location
         self.kind = kind
-        self.description = description
+        self.descriptionText = descriptionText
         self.imagePath = imagePath
+        self.userID = Auth.auth().currentUser!.uid
         self.likes = []
         self.dislikes = []
         self.expireDate = calculateExpireDate()
@@ -56,19 +58,19 @@ class SpeedCamera: Item {
         return dislikes.count
     }
     
-    func like(userUid: String) {
-        removeLike(userUid: userUid)
-        likes.insert(userUid)
+    func like(userId: String) {
+        removeLike(userId: userId)
+        likes.insert(userId)
     }
     
-    func dislike(userUid: String) {
-        removeLike(userUid: userUid)
-        dislikes.insert(userUid)
+    func dislike(userId: String) {
+        removeLike(userId: userId)
+        dislikes.insert(userId)
     }
     
-    func removeLike(userUid: String) {
-        likes.remove(userUid)
-        dislikes.remove(userUid)
+    func removeLike(userId: String) {
+        likes.remove(userId)
+        dislikes.remove(userId)
     }
 
 }

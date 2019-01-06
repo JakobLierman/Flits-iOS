@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseFirestore
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
     
@@ -67,6 +66,8 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func signUpAction(_ sender: UIButton) {
+        // TODO: Check if all fields are filled
+        
         // Check if passwords match
         if passwordTextField.text != passwordConfirmTextField.text {
             let alertController = UIAlertController(title: "Wachtwoorden komen niet overeen", message: "Gelieve uw wachtwoord opnieuw in te geven", preferredStyle: .alert)

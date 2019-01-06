@@ -12,7 +12,7 @@ class AddAvgSpeedCheckViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var startLocationTextView: UITextField!
+    @IBOutlet weak var beginLocationTextView: UITextField!
     @IBOutlet weak var endLocationTextView: UITextField!
     weak var activeField: UITextField?
     

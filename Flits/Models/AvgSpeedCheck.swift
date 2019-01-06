@@ -10,17 +10,19 @@ import Foundation
 
 class AvgSpeedCheck: Item {
     
-    // MARK: Properties
+    // MARK: - Properties
     let beginLocation: String
     let endLocation: String
+    let userID: String
     var likes: Set<String>
     var dislikes: Set<String>
     let timeCreated: Date
     
-    // MARK: Constructors
+    // MARK: - Constructors
     init(beginLocation: String, endLocation: String) {
         self.timeCreated = Date()
         self.beginLocation = beginLocation
+        self.userID = Auth.auth().currentUser!.uid
         self.likes = []
         self.dislikes = []
         self.endLocation = endLocation
@@ -35,14 +37,19 @@ class AvgSpeedCheck: Item {
         return dislikes.count
     }
     
-    func like(userUid: String) {
-        removeLike(userUid: userUid)
-        likes.insert(userUid)
+    func like(userId: String) {
+        removeLike(userId: userId)
+        likes.insert(userId)
     }
     
-    func dislike(userUid: String) {
-        removeLike(userUid: userUid)
-        dislikes.insert(userUid)
+    func dislike(userId: String) {
+        removeLike(userId: userId)
+        dislikes.insert(userId)
+    }
+    
+    func removeLike(userId: String) {
+        likes.remove(userId)
+        dislikes.remove(userId)
     }
     
     func removeLike(userUid: String) {

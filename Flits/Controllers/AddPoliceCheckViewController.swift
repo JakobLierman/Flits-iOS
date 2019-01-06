@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    // MARK: Properties
+    // MARK: - Properties
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
@@ -18,6 +19,7 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     var imagePicker: UIImagePickerController!
     @IBOutlet weak var selectImageButton: UIButton!
     weak var activeField: UITextField?
+    var hasImage: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,7 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
+            hasImage = true
             
             // Change button and image settings
             selectImageButton.setTitle("", for: .normal)
@@ -80,7 +83,7 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
         imagePicker.dismiss(animated: true, completion: nil)
     }
     
-    // MARK: Actions
+    // MARK: - Actions
     @IBAction func cancelAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

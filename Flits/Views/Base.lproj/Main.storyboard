@@ -130,7 +130,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="HC8-F5-MyJ" id="9HA-uh-NGp"/>
                                                 </connections>
@@ -146,7 +146,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="HC8-F5-MyJ" id="9NA-U8-SCX"/>
                                                 </connections>
@@ -218,10 +218,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="bPw-Ti-N11">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="bPw-Ti-N11">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bns-Fc-BID">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bns-Fc-BID">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car_green" translatesAutoresizingMaskIntoConstraints="NO" id="ccJ-Ne-zjZ">
@@ -231,7 +231,7 @@
                                                     <constraint firstAttribute="height" constant="100" id="ceU-Cc-HXr"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-n7-lrb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-n7-lrb">
                                                 <rect key="frame" x="82" y="618" width="250" height="80"/>
                                                 <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -260,7 +260,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="YJj-2w-AqY"/>
                                                 </connections>
@@ -276,7 +276,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="fKQ-Tx-Aye"/>
                                                 </connections>
@@ -292,7 +292,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="n31-x2-NCe"/>
                                                 </connections>
@@ -302,7 +302,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="Kr1-8H-Wu1"/>
                                                 </connections>
@@ -355,7 +355,6 @@
                             <constraint firstItem="bPw-Ti-N11" firstAttribute="top" secondItem="4hv-tL-faG" secondAttribute="top" id="SGq-t0-3fX"/>
                             <constraint firstItem="bPw-Ti-N11" firstAttribute="leading" secondItem="4hv-tL-faG" secondAttribute="leading" id="Z4Y-kk-QKI"/>
                             <constraint firstItem="bPw-Ti-N11" firstAttribute="trailing" secondItem="4hv-tL-faG" secondAttribute="trailing" id="b4a-RJ-dzX"/>
-                            <constraint firstItem="4hv-tL-faG" firstAttribute="bottom" secondItem="eZG-n7-lrb" secondAttribute="bottom" priority="250" constant="50" id="dME-jr-z9O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4hv-tL-faG"/>
                     </view>
@@ -1066,9 +1065,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="beginLocationTextView" destination="TyV-f7-WHh" id="1iV-Te-nDw"/>
                         <outlet property="endLocationTextView" destination="htl-m0-Lyv" id="bKj-PJ-syX"/>
                         <outlet property="scrollView" destination="Zuc-Sa-fIG" id="PzJ-QK-jgF"/>
-                        <outlet property="startLocationTextView" destination="TyV-f7-WHh" id="1iV-Te-nDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFD-xd-Xw7" userLabel="First Responder" sceneMemberID="firstResponder"/>

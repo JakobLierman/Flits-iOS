@@ -86,6 +86,8 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     }
 
     @IBAction func saveAction(_ sender: Any) {
+        // TODO: Check if all fields are filled
+        
         // Create new SpeedCamera instance
         let speedCamera: SpeedCamera = SpeedCamera.init(location: locationTextField.text!, kind: speedCameraKind!, description: descriptionTextField.text)
         // Write instance to database

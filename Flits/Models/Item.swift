@@ -10,10 +10,15 @@ import Foundation
 
 protocol Item {
     
+    // Returns likes
     func getLikes() -> Int
+    // Returns dislikes
     func getDislikes() -> Int
-    func like(userUid: String)
-    func dislike(userUid: String)
-    func removeLike(userUid: String)
+    // Likes the post
+    func like(userId: String)
+    // Dislikes the post
+    func dislike(userId: String)
+    // Removes like or dislike
+    func removeLike(userId: String)
     
 }

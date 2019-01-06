@@ -64,6 +64,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func logInAction(_ sender: UIButton) {
+        // TODO: Check if all fields are filled
+        
         // Log user in
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error == nil {
