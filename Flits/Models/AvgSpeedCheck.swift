@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class AvgSpeedCheck: Item {
+class AvgSpeedCheck: Item, ImmutableMappable {
     
     // MARK: - Properties
     let beginLocation: String
@@ -28,7 +29,24 @@ class AvgSpeedCheck: Item {
         self.endLocation = endLocation
     }
     
-    // MARK: Functions
+    // MARK: - ObjectMapper
+    required init(map: Map) throws {
+        beginLocation   = try map.value("beginLocation")
+        endLocation     = try map.value("endLocation")
+        userID          = try map.value("user")
+        likes           = (try? map.value("likes")) ?? []
+        dislikes        = (try? map.value("dislikes")) ?? []
+        timeCreated     = try map.value("timeCreated", using:DateTransform())
+    }
+    
+    func mapping(map: Map) {
+        beginLocation   >>> map["beginLocation"]
+        endLocation     >>> map["endLocation"]
+        userID          >>> map["user"]
+        timeCreated     >>> (map["timeCreated"], DateTransform())
+    }
+    
+    // MARK: - Functions
     func getLikes() -> Int {
         return likes.count
     }

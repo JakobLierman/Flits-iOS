@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class PoliceCheck: Item {
+class PoliceCheck: Item, ImmutableMappable {
     
     // MARK: Properties
     let location: String
@@ -32,7 +33,28 @@ class PoliceCheck: Item {
         self.expireDate = Date(timeInterval: 21600, since: timeCreated)
     }
     
-    // MARK: Functions
+    // MARK: - ObjectMapper
+    required init(map: Map) throws {
+        location        = try map.value("location")
+        descriptionText = try? map.value("description")
+        imagePath       = try? map.value("image")
+        userID          = try map.value("user")
+        likes           = (try? map.value("likes")) ?? []
+        dislikes        = (try? map.value("dislikes")) ?? []
+        timeCreated     = try map.value("timeCreated", using:DateTransform())
+        expireDate      = try map.value("expireDate", using:DateTransform())
+    }
+    
+    func mapping(map: Map) {
+        location        >>> map["location"]
+        descriptionText >>> map["description"]
+        imagePath       >>> map["image"]
+        userID          >>> map["user"]
+        timeCreated     >>> (map["timeCreated"], DateTransform())
+        expireDate      >>> (map["expireDate"], DateTransform())
+    }
+    
+    // MARK: - Functions
     func getLikes() -> Int {
         return likes.count
     }

@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import ObjectMapper
 
-class SpeedCamera: Item {
-
+class SpeedCamera: Item, ImmutableMappable {
+    
     // MARK: Properties
     let location: String
     let kind: String
@@ -33,8 +34,31 @@ class SpeedCamera: Item {
         self.dislikes = []
         self.expireDate = calculateExpireDate()
     }
+    
+    // MARK: - ObjectMapper
+    required init(map: Map) throws {
+        location        = try map.value("location")
+        kind            = try map.value("kind")
+        descriptionText = try? map.value("description")
+        imagePath       = try? map.value("image")
+        userID          = try map.value("user")
+        likes           = (try? map.value("likes")) ?? []
+        dislikes        = (try? map.value("dislikes")) ?? []
+        timeCreated     = try map.value("timeCreated", using:DateTransform())
+        expireDate      = try? map.value("expireDate", using:DateTransform())
+    }
+    
+    func mapping(map: Map) {
+        location        >>> map["location"]
+        kind            >>> map["kind"]
+        descriptionText >>> map["description"]
+        imagePath       >>> map["image"]
+        userID          >>> map["user"]
+        timeCreated     >>> (map["timeCreated"], DateTransform())
+        expireDate      >>> (map["expireDate"], DateTransform())
+    }
 
-    // MARK: Functions
+    // MARK: - Functions
     private func calculateExpireDate() -> Date? {
         let expireDate: Date?
         switch kind {

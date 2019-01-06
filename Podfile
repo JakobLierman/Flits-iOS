@@ -10,5 +10,6 @@ target 'Flits' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'ObjectMapper', '~> 3.4'
 
 end
