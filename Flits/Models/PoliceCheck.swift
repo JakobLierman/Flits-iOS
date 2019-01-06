@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 import ObjectMapper
 
 class PoliceCheck: Item, ImmutableMappable {
@@ -20,6 +21,9 @@ class PoliceCheck: Item, ImmutableMappable {
     var dislikes: Set<String>
     let timeCreated: Date
     let expireDate: Date
+    // Firebase
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
     
     // MARK: - Constructors
     init(location: String, descriptionText: String? = nil, imagePath: String? = nil) {
@@ -77,11 +81,24 @@ class PoliceCheck: Item, ImmutableMappable {
         likes.remove(userId)
         dislikes.remove(userId)
     }
+    
+    func toDatabase() -> DocumentReference {
+        // Data from object in JSON
+        let data = self.toJSON()
+        // Upload data to database
+        ref = db.collection("policeChecks").addDocument(data: data) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
+        return ref!
     }
     
-    func removeLike(userUid: String) {
-        likes.remove(userUid)
-        dislikes.remove(userUid)
+    // Adds imagePath to item in database
+    func addImagePath(path: String) {
+        db.collection("policeChecks").document(ref!.documentID).setData(["image" : path], merge: true)
     }
     
 }

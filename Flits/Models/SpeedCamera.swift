@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 import ObjectMapper
 
 class SpeedCamera: Item, ImmutableMappable {
@@ -21,6 +22,9 @@ class SpeedCamera: Item, ImmutableMappable {
     var dislikes: Set<String>
     let timeCreated: Date
     var expireDate: Date?
+    // Firebase
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
 
     // MARK: - Constructors
     init(location: String, kind: String, descriptionText: String? = nil, imagePath: String? = nil) {
@@ -95,6 +99,25 @@ class SpeedCamera: Item, ImmutableMappable {
     func removeLike(userId: String) {
         likes.remove(userId)
         dislikes.remove(userId)
+    }
+    
+    func toDatabase() -> DocumentReference {
+        // Data from object in JSON
+        let data = self.toJSON()
+        // Upload data to database
+        ref = db.collection("speedCameras").addDocument(data: data) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
+        return ref!
+    }
+    
+    // Adds imagePath to item in database
+    func addImagePath(path: String) {
+        db.collection("speedCameras").document(ref!.documentID).setData(["image" : path], merge: true)
     }
 
 }

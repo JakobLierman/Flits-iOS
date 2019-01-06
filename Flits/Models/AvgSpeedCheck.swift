@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 import ObjectMapper
 
 class AvgSpeedCheck: Item, ImmutableMappable {
@@ -18,6 +19,9 @@ class AvgSpeedCheck: Item, ImmutableMappable {
     var likes: Set<String>
     var dislikes: Set<String>
     let timeCreated: Date
+    // Firebase
+    let db = Firestore.firestore()
+    var ref: DocumentReference? = nil
     
     // MARK: - Constructors
     init(beginLocation: String, endLocation: String) {
@@ -70,9 +74,18 @@ class AvgSpeedCheck: Item, ImmutableMappable {
         dislikes.remove(userId)
     }
     
-    func removeLike(userUid: String) {
-        likes.remove(userUid)
-        dislikes.remove(userUid)
+    func toDatabase() -> DocumentReference {
+        // Data from object in JSON
+        let data = self.toJSON()
+        // Upload data to database
+        ref = db.collection("avgSpeedChecks").addDocument(data: data) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(self.ref!.documentID)")
+            }
+        }
+        return ref!
     }
 
 }

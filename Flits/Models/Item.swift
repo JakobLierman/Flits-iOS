@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 protocol Item {
     
@@ -20,5 +21,8 @@ protocol Item {
     func dislike(userId: String)
     // Removes like or dislike
     func removeLike(userId: String)
+    
+    // Uploads item to database, returns ID
+    func toDatabase() -> DocumentReference
     
 }
