@@ -10,9 +10,10 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class PoliceCheck: Item, ImmutableMappable {
+class PoliceCheck: Item, ImmutableMappable, Hashable {
     
     // MARK: Properties
+    var id: String = ""
     let location: String
     let descriptionText: String?
     var imagePath: String?
@@ -24,6 +25,10 @@ class PoliceCheck: Item, ImmutableMappable {
     // Firebase
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
+    // Hashable
+    var hashValue: Int {
+        return id.hashValue
+    }
     
     // MARK: - Constructors
     init(location: String, descriptionText: String? = nil, imagePath: String? = nil) {
@@ -99,6 +104,15 @@ class PoliceCheck: Item, ImmutableMappable {
     // Adds imagePath to item in database
     func addImagePath(path: String) {
         db.collection("policeChecks").document(ref!.documentID).setData(["image" : path], merge: true)
+    }
+    
+    func setId(id: String) {
+        self.id = id
+    }
+    
+    // Equatable
+    static func == (lhs: PoliceCheck, rhs: PoliceCheck) -> Bool {
+        return lhs.id == rhs.id
     }
     
 }

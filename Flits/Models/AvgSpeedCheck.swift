@@ -10,9 +10,10 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class AvgSpeedCheck: Item, ImmutableMappable {
+class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
     
     // MARK: - Properties
+    var id: String = ""
     let beginLocation: String
     let endLocation: String
     let userID: String
@@ -22,6 +23,10 @@ class AvgSpeedCheck: Item, ImmutableMappable {
     // Firebase
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
+    // Hashable
+    var hashValue: Int {
+        return id.hashValue
+    }
     
     // MARK: - Constructors
     init(beginLocation: String, endLocation: String) {
@@ -86,6 +91,15 @@ class AvgSpeedCheck: Item, ImmutableMappable {
             }
         }
         return ref!
+    }
+    
+    func setId(id: String) {
+        self.id = id
+    }
+    
+    // Equatable
+    static func == (lhs: AvgSpeedCheck, rhs: AvgSpeedCheck) -> Bool {
+        return lhs.id == rhs.id
     }
 
 }

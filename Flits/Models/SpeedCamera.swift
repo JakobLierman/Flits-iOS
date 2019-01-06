@@ -10,9 +10,10 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class SpeedCamera: Item, ImmutableMappable {
+class SpeedCamera: Item, ImmutableMappable, Hashable {
     
     // MARK: Properties
+    var id: String = ""
     let location: String
     let kind: String
     var descriptionText: String?
@@ -25,6 +26,10 @@ class SpeedCamera: Item, ImmutableMappable {
     // Firebase
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
+    // Hashable
+    var hashValue: Int {
+        return id.hashValue
+    }
 
     // MARK: - Constructors
     init(location: String, kind: String, descriptionText: String? = nil, imagePath: String? = nil) {
@@ -119,5 +124,13 @@ class SpeedCamera: Item, ImmutableMappable {
     func addImagePath(path: String) {
         db.collection("speedCameras").document(ref!.documentID).setData(["image" : path], merge: true)
     }
+    
+    func setId(id: String) {
+        self.id = id
+    }
 
+    // Equatable
+    static func == (lhs: SpeedCamera, rhs: SpeedCamera) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
