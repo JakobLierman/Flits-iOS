@@ -23,6 +23,8 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     @IBOutlet weak var selectImageButton: UIButton!
     weak var activeField: UITextField?
     var hasImage: Bool = false
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var kindLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,25 +88,25 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     }
 
     @IBAction func saveAction(_ sender: Any) {
-        // TODO: Check if all fields are filled
-        
-        // Create new SpeedCamera instance
-        let speedCamera: SpeedCamera = SpeedCamera.init(location: locationTextField.text!, kind: speedCameraKind!, descriptionText: descriptionTextField.text)
-        // Write instance to database
-        let documentReference = speedCamera.toDatabase()
-        
-        // Get item ID
-        let itemId = documentReference.documentID
-        
-        if hasImage {
-            // Create imagePath
-            let imagePath = "images/speedCameras/\(itemId).jpg"
-            // Upload image
-            uploadImage(image: imageView.image!, path: imagePath)
-            speedCamera.addImagePath(path: imagePath)
+        if validForm() {
+            // Create new SpeedCamera instance
+            let speedCamera: SpeedCamera = SpeedCamera.init(location: locationTextField.text!, kind: speedCameraKind!, descriptionText: descriptionTextField.text)
+            // Write instance to database
+            let documentReference = speedCamera.toDatabase()
+
+            // Get item ID
+            let itemId = documentReference.documentID
+
+            if hasImage {
+                // Create imagePath
+                let imagePath = "images/speedCameras/\(itemId).jpg"
+                // Upload image
+                uploadImage(image: imageView.image!, path: imagePath)
+                speedCamera.addImagePath(path: imagePath)
+            }
+
+            self.dismiss(animated: true, completion: nil)
         }
-        
-        self.dismiss(animated: true, completion: nil)
     }
 
     @IBAction func selectImageAction(_ sender: Any) {
@@ -150,6 +152,33 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
             imageView.contentMode = .scaleAspectFit
         }
         imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
+    // Check if form is valid
+    private func validForm() -> Bool {
+        var isValid: Bool = true
+        
+        // Check location
+        locationLabel.textColor = UIColor.black
+        if locationTextField.text!.isEmpty {
+            locationLabel.textColor = UIColor.red
+            isValid = false
+        }
+        // Check kind
+        kindLabel.textColor = UIColor.black
+        if speedCameraKind!.isEmpty {
+            kindLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        if !isValid {
+            // Show alert if form is not filled in correctly
+            let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        return isValid
     }
     
     /*

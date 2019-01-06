@@ -12,9 +12,11 @@ class AddAvgSpeedCheckViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: Properties
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var beginLocationTextView: UITextField!
-    @IBOutlet weak var endLocationTextView: UITextField!
+    @IBOutlet weak var beginLocationTextField: UITextField!
+    @IBOutlet weak var endLocationTextField: UITextField!
     weak var activeField: UITextField?
+    @IBOutlet weak var beginLocationLabel: UILabel!
+    @IBOutlet weak var endLocationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,14 +69,41 @@ class AddAvgSpeedCheckViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        // TODO: Check if all fields are filled
+        if validForm() {
+            // Create new AvgSpeedCheck instance
+            let avgSpeedCheck: AvgSpeedCheck = AvgSpeedCheck.init(beginLocation: beginLocationTextField.text!, endLocation: endLocationTextField.text!)
+            // Write instance to database
+            avgSpeedCheck.toDatabase()
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    // Check if form is valid
+    private func validForm() -> Bool {
+        var isValid: Bool = true
         
-        // Create new AvgSpeedCheck instance
-        let avgSpeedCheck: AvgSpeedCheck = AvgSpeedCheck.init(beginLocation: beginLocationTextView.text!, endLocation: endLocationTextView.text!)
-        // Write instance to database
-        avgSpeedCheck.toDatabase()
+        // Check beginLocation
+        beginLocationLabel.textColor = UIColor.black
+        if beginLocationTextField.text!.isEmpty {
+            beginLocationLabel.textColor = UIColor.red
+            isValid = false
+        }
+        // Check endLocation
+        endLocationLabel.textColor = UIColor.black
+        if endLocationTextField.text!.isEmpty {
+            endLocationLabel.textColor = UIColor.red
+            isValid = false
+        }
         
-        self.dismiss(animated: true, completion: nil)
+        if !isValid {
+            // Show alert if form is not filled in correctly
+            let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        return isValid
     }
 
     /*

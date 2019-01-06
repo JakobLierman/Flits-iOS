@@ -20,6 +20,7 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     @IBOutlet weak var selectImageButton: UIButton!
     weak var activeField: UITextField?
     var hasImage: Bool = false
+    @IBOutlet weak var locationLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,24 +90,24 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        // TODO: Check if all fields are filled
+        if validForm() {
+            // Create new PoliceCheck instance
+            let policeCheck: PoliceCheck = PoliceCheck.init(location: locationTextField.text!, descriptionText: descriptionTextField.text)
+            // Write instance to database
+            let documentReference = policeCheck.toDatabase()
         
-        // Create new PoliceCheck instance
-        let policeCheck: PoliceCheck = PoliceCheck.init(location: locationTextField.text!, descriptionText: descriptionTextField.text)
-        // Write instance to database
-        let documentReference = policeCheck.toDatabase()
+            // Get item ID
+            let itemId = documentReference.documentID
         
-        // Get item ID
-        let itemId = documentReference.documentID
-        
-        if hasImage {
-            // Create imagePath
-            let imagePath = "images/policeChecks/\(itemId).jpg"
-            // Upload image
-            uploadImage(image: imageView.image!, path: imagePath)
-            policeCheck.addImagePath(path: imagePath)
+            if hasImage {
+                // Create imagePath
+                let imagePath = "images/policeChecks/\(itemId).jpg"
+                // Upload image
+                uploadImage(image: imageView.image!, path: imagePath)
+                policeCheck.addImagePath(path: imagePath)
+            }
+            self.dismiss(animated: true, completion: nil)
         }
-        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func selectImageAction(_ sender: Any) {
@@ -123,6 +124,27 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
         metaData.contentType = "image/jpeg"
         // Upload
         childUserImages.putData(data as Data, metadata: metaData)
+    }
+    
+    // Check if form is valid
+    private func validForm() -> Bool {
+        var isValid: Bool = true
+        
+        // Check location
+        locationLabel.textColor = UIColor.black
+        if locationTextField.text!.isEmpty {
+            locationLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        if !isValid {
+            // Show alert if form is not filled in correctly
+            let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        return isValid
     }
 
     /*

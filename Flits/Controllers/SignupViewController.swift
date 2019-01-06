@@ -17,6 +17,9 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmTextField: UITextField!
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     weak var activeField: UITextField?
     
     override func viewDidLoad() {
@@ -66,16 +69,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func signUpAction(_ sender: UIButton) {
-        // TODO: Check if all fields are filled
-        
-        // Check if passwords match
-        if passwordTextField.text != passwordConfirmTextField.text {
-            let alertController = UIAlertController(title: "Wachtwoorden komen niet overeen", message: "Gelieve uw wachtwoord opnieuw in te geven", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
-        } else {
+        if validForm() {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
                 if error == nil {
                     // Save user data to database
@@ -106,6 +100,53 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    // Check if form is valid
+    private func validForm() -> Bool {
+        var isValid: Bool = true
+        
+        // Check name
+        fullNameLabel.textColor = UIColor.black
+        if fullNameTextField.text!.isEmpty {
+            fullNameLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        // Check email
+        emailLabel.textColor = UIColor.black
+        if emailTextField.text!.isEmpty {
+            emailLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        // Check password
+        passwordLabel.textColor = UIColor.black
+        if passwordTextField.text!.isEmpty {
+            passwordLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        if !isValid {
+            // Show alert if form is not filled in correctly
+            let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            // Check if passwords match
+            if passwordTextField.text != passwordConfirmTextField.text {
+                passwordLabel.textColor = UIColor.red
+                // Show alert
+                let alertController = UIAlertController(title: "Wachtwoorden komen niet overeen", message: "Gelieve uw wachtwoord opnieuw in te geven", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
+                isValid = false
+            }
+        }
+        
+        return false
     }
     
     /*

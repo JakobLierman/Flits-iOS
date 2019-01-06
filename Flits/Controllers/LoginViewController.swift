@@ -15,6 +15,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var passwordLabel: UILabel!
     weak var activeField: UITextField?
     
     override func viewDidLoad() {
@@ -64,20 +66,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Actions
     @IBAction func logInAction(_ sender: UIButton) {
-        // TODO: Check if all fields are filled
-        
-        // Log user in
-        Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
-            if error == nil {
-                self.performSegue(withIdentifier: "loginToHome", sender: self)
-            }
-            else {
-                // Error while logging in
-                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        if validForm() {
+            // Log user in
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "loginToHome", sender: self)
+                }
+                else {
+                    // Error while logging in
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
 
-                alertController.addAction(defaultAction)
-                self.present(alertController, animated: true, completion: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         }
     }
@@ -90,6 +92,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         return true
+    }
+        
+    // Check if form is valid
+    private func validForm() -> Bool {
+        var isValid: Bool = true
+        
+        // Check email
+        emailLabel.textColor = UIColor.black
+        if emailTextField.text!.isEmpty {
+            emailLabel.textColor = UIColor.red
+            isValid = false
+        }
+        // Check password
+        passwordLabel.textColor = UIColor.black
+        if passwordTextField.text!.isEmpty {
+            passwordLabel.textColor = UIColor.red
+            isValid = false
+        }
+        
+        if !isValid {
+            // Show alert if form is not filled in correctly
+            let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
+        return isValid
     }
 
     /*

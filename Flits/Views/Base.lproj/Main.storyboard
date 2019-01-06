@@ -200,7 +200,9 @@
                         <viewLayoutGuide key="safeArea" id="Qaq-PJ-6o5"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="AxJ-TU-zpW" id="pnu-Yw-3Or"/>
                         <outlet property="emailTextField" destination="bEc-6q-lch" id="o8c-qa-rf1"/>
+                        <outlet property="passwordLabel" destination="9tl-M8-NNt" id="yXp-Fv-WtB"/>
                         <outlet property="passwordTextField" destination="jLR-9g-2kv" id="FVo-2I-pYH"/>
                         <outlet property="scrollView" destination="GLx-p8-0mf" id="nvn-9Q-aZX"/>
                         <segue destination="des-fx-crO" kind="presentation" identifier="loginToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="1O8-W1-yPI"/>
@@ -359,9 +361,12 @@
                         <viewLayoutGuide key="safeArea" id="4hv-tL-faG"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="4W4-Lt-K9a" id="gsS-AO-gbr"/>
                         <outlet property="emailTextField" destination="XKe-Dq-Zs9" id="eKS-Lx-nkr"/>
+                        <outlet property="fullNameLabel" destination="xx3-OX-gJ8" id="d7I-xA-idY"/>
                         <outlet property="fullNameTextField" destination="mQk-OZ-uVW" id="dP0-bX-Dgi"/>
                         <outlet property="passwordConfirmTextField" destination="i0M-PD-zv6" id="MYF-xW-yb2"/>
+                        <outlet property="passwordLabel" destination="Dse-XH-2zQ" id="C6S-QH-23o"/>
                         <outlet property="passwordTextField" destination="Bv0-15-fdv" id="GU3-cO-WEM"/>
                         <outlet property="scrollView" destination="bPw-Ti-N11" id="JtV-Uf-KL3"/>
                         <segue destination="des-fx-crO" kind="presentation" identifier="signupToHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="CzA-wk-DHI"/>
@@ -696,6 +701,8 @@
                     <connections>
                         <outlet property="descriptionTextField" destination="e4d-Zi-0Jc" id="6ZW-2d-VzY"/>
                         <outlet property="imageView" destination="MIe-sf-0ha" id="cHQ-Kt-yMY"/>
+                        <outlet property="kindLabel" destination="Xag-Sn-NKU" id="2TV-9A-K8u"/>
+                        <outlet property="locationLabel" destination="v0w-77-T3g" id="DMP-vu-XWf"/>
                         <outlet property="locationTextField" destination="lk5-wF-Fwf" id="8Xx-rf-297"/>
                         <outlet property="scrollView" destination="WlW-P8-mw0" id="Oci-JC-zCG"/>
                         <outlet property="selectImageButton" destination="1Th-Lx-YI0" id="W9g-hI-hye"/>
@@ -1065,8 +1072,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="beginLocationTextView" destination="TyV-f7-WHh" id="1iV-Te-nDw"/>
-                        <outlet property="endLocationTextView" destination="htl-m0-Lyv" id="bKj-PJ-syX"/>
+                        <outlet property="beginLocationLabel" destination="aUi-Kk-66A" id="FGP-UD-Otn"/>
+                        <outlet property="beginLocationTextField" destination="TyV-f7-WHh" id="1iV-Te-nDw"/>
+                        <outlet property="endLocationLabel" destination="sIt-iY-XwO" id="bBb-6e-u4A"/>
+                        <outlet property="endLocationTextField" destination="htl-m0-Lyv" id="bKj-PJ-syX"/>
                         <outlet property="scrollView" destination="Zuc-Sa-fIG" id="PzJ-QK-jgF"/>
                     </connections>
                 </viewController>
@@ -1259,6 +1268,7 @@
                     <connections>
                         <outlet property="descriptionTextField" destination="wX2-kZ-Z3R" id="jeQ-9R-KsS"/>
                         <outlet property="imageView" destination="2fV-QP-3g3" id="rjo-0F-nci"/>
+                        <outlet property="locationLabel" destination="Dae-D9-b9j" id="BFH-kC-8Z6"/>
                         <outlet property="locationTextField" destination="Fme-cr-ag0" id="rHm-Mc-Cc8"/>
                         <outlet property="scrollView" destination="RB3-Ro-pC4" id="uaX-AX-S2E"/>
                         <outlet property="selectImageButton" destination="TG2-Zn-BFx" id="Sk9-fL-u3m"/>
@@ -1281,7 +1291,7 @@
         <image name="icon_Circular" width="1024.3199462890625" height="1024.3199462890625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CzA-wk-DHI"/>
+        <segue reference="1O8-W1-yPI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
