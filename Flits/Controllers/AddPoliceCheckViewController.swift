@@ -89,12 +89,40 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        // TODO - Implement
+        // TODO: Check if all fields are filled
+        
+        // Create new PoliceCheck instance
+        let policeCheck: PoliceCheck = PoliceCheck.init(location: locationTextField.text!, descriptionText: descriptionTextField.text)
+        // Write instance to database
+        let documentReference = policeCheck.toDatabase()
+        
+        // Get item ID
+        let itemId = documentReference.documentID
+        
+        if hasImage {
+            // Create imagePath
+            let imagePath = "images/policeChecks/\(itemId).jpg"
+            // Upload image
+            uploadImage(image: imageView.image!, path: imagePath)
+            policeCheck.addImagePath(path: imagePath)
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func selectImageAction(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    // Upload image
+    private func uploadImage(image: UIImage, path: String) {
+        let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+        var data = NSData()
+        data = image.jpegData(compressionQuality: 0.8)! as NSData
+        let childUserImages = storageRef.child(path)
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        // Upload
+        childUserImages.putData(data as Data, metadata: metaData)
     }
 
     /*

@@ -67,7 +67,13 @@ class AddAvgSpeedCheckViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        // TODO - Implement
+        // TODO: Check if all fields are filled
+        
+        // Create new AvgSpeedCheck instance
+        let avgSpeedCheck: AvgSpeedCheck = AvgSpeedCheck.init(beginLocation: beginLocationTextView.text!, endLocation: endLocationTextView.text!)
+        // Write instance to database
+        avgSpeedCheck.toDatabase()
+        
         self.dismiss(animated: true, completion: nil)
     }
 

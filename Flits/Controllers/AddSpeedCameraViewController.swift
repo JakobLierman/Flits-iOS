@@ -89,18 +89,19 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
         // TODO: Check if all fields are filled
         
         // Create new SpeedCamera instance
-        let speedCamera: SpeedCamera = SpeedCamera.init(location: locationTextField.text!, kind: speedCameraKind!, description: descriptionTextField.text)
+        let speedCamera: SpeedCamera = SpeedCamera.init(location: locationTextField.text!, kind: speedCameraKind!, descriptionText: descriptionTextField.text)
         // Write instance to database
+        let documentReference = speedCamera.toDatabase()
         
         // Get item ID
-        let itemId = "test" // TODO
+        let itemId = documentReference.documentID
         
         if hasImage {
-            // Create imagePath and imageName
-            let imagePath = "images/\(itemId).jpg"
-            let image = imageView.image
+            // Create imagePath
+            let imagePath = "images/speedCameras/\(itemId).jpg"
             // Upload image
-            uploadImage(image: image!, path: imagePath)
+            uploadImage(image: imageView.image!, path: imagePath)
+            speedCamera.addImagePath(path: imagePath)
         }
         
         self.dismiss(animated: true, completion: nil)
