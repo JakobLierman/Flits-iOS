@@ -22,7 +22,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Gets data from database and updates on changes
-        db.collection("avgSpeedChecks").addSnapshotListener { querySnapshot, error in
+        db.collection("avgSpeedChecks").limit(to: 1000).addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
                 return
@@ -38,6 +38,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
                     avgSpeedCheck.setId(id: diff.document.documentID)
                     self.avgSpeedChecks.remove(avgSpeedCheck)
                 }
+                self.tableView.reloadData()
             }
         }
     }

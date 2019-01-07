@@ -22,7 +22,7 @@ class PoliceCheckTableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Gets data from database and updates on changes
-        db.collection("policeChecks").addSnapshotListener { querySnapshot, error in
+        db.collection("policeChecks").limit(to: 1000).addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
                 return
@@ -38,6 +38,7 @@ class PoliceCheckTableViewController: UITableViewController {
                     policeCheck.setId(id: diff.document.documentID)
                     self.policeChecks.remove(policeCheck)
                 }
+                self.tableView.reloadData()
             }
         }
     }

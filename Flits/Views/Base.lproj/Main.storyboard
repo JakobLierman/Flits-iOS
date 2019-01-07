@@ -435,7 +435,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Uj8-wM-Sk8" kind="presentation" identifier="ShowDetail" modalPresentationStyle="pageSheet" id="RZ9-EL-8eL"/>
+                                    <segue destination="Uj8-wM-Sk8" kind="presentation" identifier="showDetail" modalPresentationStyle="pageSheet" id="RZ9-EL-8eL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -454,7 +454,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IDc-UN-zqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4519" y="-738"/>
+            <point key="canvasLocation" x="4519" y="-802"/>
         </scene>
         <!--PoliceChecks-->
         <scene sceneID="dXD-Wh-cn5">
@@ -489,7 +489,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="boO-sH-hyB" kind="presentation" identifier="ShowDetail" modalPresentationStyle="pageSheet" id="QY6-fU-N7F"/>
+                                    <segue destination="boO-sH-hyB" kind="presentation" identifier="showDetail" modalPresentationStyle="pageSheet" id="QY6-fU-N7F"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -508,7 +508,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z14-oa-PgY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4519" y="589"/>
+            <point key="canvasLocation" x="4522" y="588"/>
         </scene>
         <!--AddSpeedCamera-->
         <scene sceneID="KyY-Ky-EmR">
@@ -663,7 +663,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1I5-79-fRE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Flitser toevoegen" id="cIj-uj-A5r">
+                    <navigationItem key="navigationItem" title="Nieuw" id="cIj-uj-A5r">
                         <barButtonItem key="leftBarButtonItem" title="Annuleren" id="6pm-RS-GgO">
                             <connections>
                                 <action selector="cancelAction:" destination="S0O-FO-n8J" id="xQx-83-5zL"/>
@@ -721,7 +721,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="LCn-Uj-ubf">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -738,7 +737,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ji-Pl-9gl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="-738"/>
+            <point key="canvasLocation" x="3612" y="-802"/>
         </scene>
         <!--Controles-->
         <scene sceneID="Q7R-Wt-NCE">
@@ -749,7 +748,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="UB0-JI-jbs">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -766,7 +764,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="672-Dw-go5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3612" y="589"/>
+            <point key="canvasLocation" x="3612" y="588"/>
         </scene>
         <!--Settings-->
         <scene sceneID="fsR-nK-gfq">
@@ -851,7 +849,9 @@
                             <outlet property="delegate" destination="Pwa-uF-MkE" id="Rzr-Gj-K5d"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Instellingen" id="Q2y-Ac-rAQ"/>
+                    <navigationItem key="navigationItem" title="Instellingen" id="Q2y-Ac-rAQ">
+                        <barButtonItem key="backBarButtonItem" title="Terug" id="qML-gh-qoN"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="kEP-jR-ybY" id="ofg-gp-jmh"/>
                     </connections>
@@ -917,7 +917,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="hjX-Z3-VhB">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1028,7 +1035,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g30-iL-hpg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Trajectcontrole toevoegen" id="oLT-Kb-b0U">
+                    <navigationItem key="navigationItem" title="Nieuw" id="oLT-Kb-b0U">
                         <barButtonItem key="leftBarButtonItem" title="Annuleren" id="TIC-YF-ExB">
                             <connections>
                                 <action selector="cancelAction:" destination="Qah-wv-6bo" id="b5y-XD-Mrr"/>
@@ -1050,7 +1057,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFD-xd-Xw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6328.985507246377" y="-740.625"/>
+            <point key="canvasLocation" x="6329" y="-804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Cp-3A-tVN">
@@ -1066,7 +1073,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9wQ-5k-kS4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="-1473"/>
+            <point key="canvasLocation" x="4516" y="-1491"/>
         </scene>
         <!--Flitser-->
         <scene sceneID="4rx-Ce-g3b">
@@ -1193,7 +1200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBM-kz-IE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="-1473"/>
+            <point key="canvasLocation" x="5422" y="-1491"/>
         </scene>
         <!--Flitsers-->
         <scene sceneID="1Re-6b-NiH">
@@ -1244,6 +1251,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="LvW-yz-yUf" id="Lon-08-55V"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gwf-I0-6Hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1257,6 +1267,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" largeTitles="YES" id="8f6-Gu-KyY">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
@@ -1283,7 +1294,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKb-bt-2Ra" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="-739"/>
+            <point key="canvasLocation" x="5422" y="-802"/>
         </scene>
         <!--Trajectcontrole-->
         <scene sceneID="tFO-G7-BXD">
@@ -1380,7 +1391,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9K-PU-Tyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="-72"/>
+            <point key="canvasLocation" x="5422" y="-87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4p0-vf-lhP">
@@ -1396,7 +1407,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ivr-eM-rdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="-72"/>
+            <point key="canvasLocation" x="4522" y="-87"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LpS-QB-YOc">
@@ -1414,7 +1425,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ei-ao-HgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5422" y="589"/>
+            <point key="canvasLocation" x="5422" y="588"/>
         </scene>
         <!--Controle-->
         <scene sceneID="ePE-h6-0f6">
@@ -1522,7 +1533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cW2-rG-9SF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5425" y="1271"/>
+            <point key="canvasLocation" x="5422" y="1313"/>
         </scene>
         <!--AddPoliceCheck-->
         <scene sceneID="6Bf-Ux-W5W">
@@ -1660,7 +1671,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WAl-vL-DnN"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Controle toevoegen" id="r5M-Xn-kwV">
+                    <navigationItem key="navigationItem" title="Nieuw" id="r5M-Xn-kwV">
                         <barButtonItem key="leftBarButtonItem" title="Annuleren" id="pLi-3X-G6W">
                             <connections>
                                 <action selector="cancelAction:" destination="sdC-3v-DxL" id="CP8-2S-0tD"/>
@@ -1683,7 +1694,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4G-Ub-FKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6330" y="589"/>
+            <point key="canvasLocation" x="6329" y="588"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gRr-oS-9DB">
@@ -1701,7 +1712,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jK3-aU-9ni" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4516" y="1271"/>
+            <point key="canvasLocation" x="4522" y="1313"/>
         </scene>
     </scenes>
     <resources>
@@ -1716,7 +1727,7 @@
         <image name="icon_Circular" width="1024.3199462890625" height="1024.3199462890625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CzA-wk-DHI"/>
+        <segue reference="O7N-Pq-b7q"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
