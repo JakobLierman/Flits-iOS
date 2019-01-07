@@ -17,8 +17,10 @@ class SpeedCameraDetailViewController: UIViewController {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var kindText: UILabel!
     @IBOutlet weak var image: UIImageView!
+    private var hasImage: Bool = false
     // Firebase
     let db = Firestore.firestore()
+    let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
 
     var speedCamera: SpeedCamera? {
         didSet {
@@ -45,7 +47,7 @@ class SpeedCameraDetailViewController: UIViewController {
         // Get image
         if speedCamera!.imagePath != nil {
             if !(speedCamera?.imagePath?.isEmpty)! {
-                let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+                hasImage = true
                 let imageRef = storageRef.child((speedCamera?.imagePath)!)
                 imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                     if let error = error {
@@ -80,9 +82,21 @@ class SpeedCameraDetailViewController: UIViewController {
                     if let err = err {
                         print("Error removing document: \(err)")
                     } else {
-                        self.dismiss(animated: true, completion: nil)
+                        print("Document removed")
+                        // Remove image from Firebase storage
+                        if self.hasImage {
+                            self.storageRef.child(self.speedCamera!.imagePath!).delete { err in
+                                if let err = err {
+                                    print("Error removing image: \(err)")
+                                } else {
+                                    print("Image removed")
+                                }
+                            }
+                        }
                     }
                 }
+                // Close screen
+                self.dismiss(animated: true, completion: nil)
             })
 
             alertController.addAction(cancelAction)

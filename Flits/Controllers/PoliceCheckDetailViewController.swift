@@ -16,8 +16,10 @@ class PoliceCheckDetailViewController: UIViewController {
     @IBOutlet weak var locationText: UILabel!
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var image: UIImageView!
+    private var hasImage: Bool = false
     // Firebase
     let db = Firestore.firestore()
+    let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
 
     var policeCheck: PoliceCheck? {
         didSet {
@@ -43,7 +45,7 @@ class PoliceCheckDetailViewController: UIViewController {
         // Get image
         if policeCheck!.imagePath != nil {
             if !(policeCheck?.imagePath?.isEmpty)! {
-                let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+                hasImage = true
                 let imageRef = storageRef.child((policeCheck?.imagePath)!)
                 imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                     if let error = error {
@@ -78,9 +80,21 @@ class PoliceCheckDetailViewController: UIViewController {
                     if let err = err {
                         print("Error removing document: \(err)")
                     } else {
-                        self.dismiss(animated: true, completion: nil)
+                        print("Document removed")
+                        // Remove image from Firebase storage
+                        if self.hasImage {
+                            self.storageRef.child(self.policeCheck!.imagePath!).delete { err in
+                                if let err = err {
+                                    print("Error removing image: \(err)")
+                                } else {
+                                    print("Image removed")
+                                }
+                            }
+                        }
                     }
                 }
+                // Close screen
+                self.dismiss(animated: true, completion: nil)
             })
 
             alertController.addAction(cancelAction)

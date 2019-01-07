@@ -58,9 +58,11 @@ class AvgSpeedCheckDetailViewController: UIViewController {
                     if let err = err {
                         print("Error removing document: \(err)")
                     } else {
-                        self.dismiss(animated: true, completion: nil)
+                        print("Document removed")
                     }
                 }
+                // Close screen
+                self.dismiss(animated: true, completion: nil)
             })
 
             alertController.addAction(cancelAction)
