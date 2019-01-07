@@ -77,7 +77,12 @@ class SpeedCamerasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeedCameraCell", for: indexPath)
         let speedCamera = speedCameras[indexPath.row]
         cell.textLabel?.text = speedCamera.location
-        cell.detailTextLabel?.text = speedCamera.kind
+        // Get timeCreated as readable format
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        dateFormatter.locale = Locale.current
+        cell.detailTextLabel?.text = dateFormatter.string(from: speedCamera.timeCreated)
         return cell
     }
     
