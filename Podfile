@@ -10,9 +10,7 @@ target 'Flits' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
-  pod 'ObjectMapper', '~> 3.4'
-  pod 'RxSwift',    '~> 4.0'
-  pod 'RxCocoa',    '~> 4.0'
+  pod 'ObjectMapper'
   pod 'OrderedSet'
 
 end
