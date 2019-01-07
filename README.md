@@ -8,13 +8,13 @@ iOS application to share police speed traps with other users. Created to learn i
 
 ## Screenshots
 
-<p>
-<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Open-speedcamera.gif" width="128px">
-<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Open-avgspeedcheck.gif" width="128px">
-<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Create-delete-policecheck.gif" width="128px">
+<p align="center">
+<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Open-speedcamera.gif" width="256px">
+<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Open-avgspeedcheck.gif" width="256px">
+<img src="https://github.com/JakobLierman/Flits-iOS/raw/master/Screenshots/Create-delete-policecheck.gif" width="256px">
 </p>
 
-***
+---
 
 ## Getting started
 
@@ -39,14 +39,14 @@ Use the [docs](https://firebase.google.com/docs/ios/setup) to change all databas
 
 1. Search for statements like this one and change accordingly.
 
-    ```swift
-    let storageRef = Storage.storage().reference(forURL: "Insert Firebase storage link here")
-    ```
+   ```swift
+   let storageRef = Storage.storage().reference(forURL: "Insert Firebase storage link here")
+   ```
 
 2. Change the `GoogleService-Info.plist` to the one you got from Firebase.
 
 ## Built With
 
-* [Firebase](https://firebase.google.com/)
-* [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper)
-* [OrderedSe](https://github.com/Weebly/OrderedSet)
+- [Firebase](https://firebase.google.com/)
+- [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper)
+- [OrderedSe](https://github.com/Weebly/OrderedSet)
