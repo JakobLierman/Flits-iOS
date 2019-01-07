@@ -49,4 +49,4 @@ Use the [docs](https://firebase.google.com/docs/ios/setup) to change all databas
 
 - [Firebase](https://firebase.google.com/)
 - [ObjectMapper](https://github.com/tristanhimmelman/ObjectMapper)
-- [OrderedSe](https://github.com/Weebly/OrderedSet)
+- [OrderedSet](https://github.com/Weebly/OrderedSet)
