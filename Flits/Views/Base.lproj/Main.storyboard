@@ -1125,7 +1125,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="16B-0O-drT">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="16B-0O-drT">
                                                 <rect key="frame" x="16" y="213" width="382" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="U7U-oo-1A2"/>
@@ -1465,7 +1465,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-SQ-0ix">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lps-SQ-0ix">
                                                 <rect key="frame" x="16" y="147" width="382" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="Jsu-vm-LtX"/>
