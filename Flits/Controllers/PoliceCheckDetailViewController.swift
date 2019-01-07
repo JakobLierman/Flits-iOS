@@ -41,15 +41,17 @@ class PoliceCheckDetailViewController: UIViewController {
             descriptionText.text = policeCheck?.descriptionText
         }
         // Get image
-        if !(policeCheck?.imagePath!.isEmpty)! {
-            let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
-            let imageRef = storageRef.child((policeCheck?.imagePath)!)
-            imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                if let error = error {
-                    // Uh-oh, an error occurred!
-                    print("error while getting image: \(error.localizedDescription)")
-                } else {
-                    self.image.image = UIImage(data: data!)
+        if policeCheck!.imagePath != nil {
+            if !(policeCheck?.imagePath?.isEmpty)! {
+                let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+                let imageRef = storageRef.child((policeCheck?.imagePath)!)
+                imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        // Uh-oh, an error occurred!
+                        print("error while getting image: \(error.localizedDescription)")
+                    } else {
+                        self.image.image = UIImage(data: data!)
+                    }
                 }
             }
         }

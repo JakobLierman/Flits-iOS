@@ -43,13 +43,6 @@ class PoliceCheckTableViewController: UITableViewController {
         }
     }
 
-    // Makes sure row does not stay selected
-    override func viewWillAppear(_ animated: Bool) {
-        if let index = self.tableView.indexPathForSelectedRow {
-            self.tableView.deselectRow(at: index, animated: true)
-        }
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,6 +69,9 @@ class PoliceCheckTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Makes sure row does not stay selected
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        // Go to detailView
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
 

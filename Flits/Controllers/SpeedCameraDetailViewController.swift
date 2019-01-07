@@ -43,15 +43,17 @@ class SpeedCameraDetailViewController: UIViewController {
         }
         kindText.text = speedCamera?.kind
         // Get image
-        if !(speedCamera?.imagePath!.isEmpty)! {
-            let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
-            let imageRef = storageRef.child((speedCamera?.imagePath)!)
-            imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                if let error = error {
-                    // Uh-oh, an error occurred!
-                    print("error while getting image: \(error.localizedDescription)")
-                } else {
-                    self.image.image = UIImage(data: data!)
+        if speedCamera!.imagePath != nil {
+            if !(speedCamera?.imagePath?.isEmpty)! {
+                let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
+                let imageRef = storageRef.child((speedCamera?.imagePath)!)
+                imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        // Uh-oh, an error occurred!
+                        print("error while getting image: \(error.localizedDescription)")
+                    } else {
+                        self.image.image = UIImage(data: data!)
+                    }
                 }
             }
         }

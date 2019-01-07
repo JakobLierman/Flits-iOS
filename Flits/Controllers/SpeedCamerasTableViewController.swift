@@ -69,6 +69,9 @@ class SpeedCamerasTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Makes sure row does not stay selected
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        // Go to detailView
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
 
