@@ -64,6 +64,13 @@ class SpeedCamerasTableViewController: UITableViewController {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale.current
         cell.detailTextLabel?.text = dateFormatter.string(from: speedCamera.timeCreated)
+        // Grey text when expired
+        if speedCamera.expireDate != nil {
+            if Date() > speedCamera.expireDate! {
+                cell.textLabel?.isEnabled = false
+                cell.detailTextLabel?.isEnabled = false
+            }
+        }
 
         return cell
     }

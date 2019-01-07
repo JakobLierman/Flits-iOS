@@ -64,6 +64,11 @@ class PoliceCheckTableViewController: UITableViewController {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale.current
         cell.detailTextLabel?.text = dateFormatter.string(from: policeCheck.timeCreated)
+        // Grey text when expired
+        if Date() > policeCheck.expireDate {
+            cell.textLabel?.isEnabled = false
+            cell.detailTextLabel?.isEnabled = false
+        }
 
         return cell
     }
