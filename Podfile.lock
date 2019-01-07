@@ -107,7 +107,13 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - ObjectMapper (3.4.1)
+  - OrderedSet (3.0.0)
   - Protobuf (3.6.1)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -115,6 +121,9 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - ObjectMapper (~> 3.4)
+  - OrderedSet
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -135,7 +144,11 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - ObjectMapper
+    - OrderedSet
     - Protobuf
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
@@ -155,8 +168,12 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
+  OrderedSet: b990e16dcf6b79f1d3826b996b1eb613c696eec0
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
-PODFILE CHECKSUM: d474cef42f0018065f1880f90a4741dc11648f43
+PODFILE CHECKSUM: c3159e4e01daa177f117e4f6c594c0b0a5095c1a
 
 COCOAPODS: 1.5.3

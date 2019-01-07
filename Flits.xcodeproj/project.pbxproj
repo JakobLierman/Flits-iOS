@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3631224B21E2849A008D9B70 /* SpeedCameraDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631224A21E2849A008D9B70 /* SpeedCameraDetailViewController.swift */; };
-		3631225221E2A626008D9B70 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631225121E2A626008D9B70 /* SplitViewController.swift */; };
 		368B065421E2704D00C0ED9A /* SpeedCamerasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */; };
 		36A39B7421CBDF2700AF5C15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */; };
 		36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A39B7521CBDF2700AF5C15 /* StartViewController.swift */; };
@@ -31,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		3631224A21E2849A008D9B70 /* SpeedCameraDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCameraDetailViewController.swift; sourceTree = "<group>"; };
-		3631225121E2A626008D9B70 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamerasTableViewController.swift; sourceTree = "<group>"; };
 		36A39B7021CBDF2700AF5C15 /* Flits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				36A39B8D21CBE55800AF5C15 /* LoginViewController.swift */,
 				36A39B8F21CBE57B00AF5C15 /* SignupViewController.swift */,
 				36D9641B21D0391C004CC1A2 /* SettingsTableViewController.swift */,
-				3631225121E2A626008D9B70 /* SplitViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -285,6 +282,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -302,6 +300,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OrderedSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -350,7 +349,6 @@
 				3631224B21E2849A008D9B70 /* SpeedCameraDetailViewController.swift in Sources */,
 				36BD9BDE21D119E80033542D /* AddPoliceCheckViewController.swift in Sources */,
 				36A39B7621CBDF2700AF5C15 /* StartViewController.swift in Sources */,
-				3631225221E2A626008D9B70 /* SplitViewController.swift in Sources */,
 				36BD9BE021D146E40033542D /* Item.swift in Sources */,
 				36D9642C21D06406004CC1A2 /* PoliceCheck.swift in Sources */,
 				36D9642A21D06371004CC1A2 /* AvgSpeedCheck.swift in Sources */,
