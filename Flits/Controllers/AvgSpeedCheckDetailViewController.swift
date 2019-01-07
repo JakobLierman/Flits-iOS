@@ -10,14 +10,14 @@ import UIKit
 import Firebase
 
 class AvgSpeedCheckDetailViewController: UIViewController {
-    
+
     // MARK: - Properties
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var beginLocationText: UILabel!
     @IBOutlet weak var endLocationText: UILabel!
     // Firebase
     let db = Firestore.firestore()
-    
+
     var avgSpeedCheck: AvgSpeedCheck? {
         didSet {
             refreshUI()
@@ -29,7 +29,7 @@ class AvgSpeedCheckDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     // Loads data in view
     private func refreshUI() {
         loadViewIfNeeded()
@@ -40,17 +40,17 @@ class AvgSpeedCheckDetailViewController: UIViewController {
             deleteButton.isEnabled = true
         }
     }
-    
+
     // MARK: - Actions
     @IBAction func doneAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func deleteAction(_ sender: Any) {
         if Auth.auth().currentUser?.uid == avgSpeedCheck?.userID {
             // Show confirmation alert
             let alertController = UIAlertController(title: "Trajectcontrole verwijderen", message: "Bent u zeker?", preferredStyle: .alert)
-            
+
             let cancelAction = UIAlertAction(title: "Annuleren", style: .cancel, handler: nil)
             let deleteAction = UIAlertAction(title: "Verwijderen", style: .destructive, handler: { (UIAlertAction) in
                 // Delete item from database
@@ -62,10 +62,10 @@ class AvgSpeedCheckDetailViewController: UIViewController {
                     }
                 }
             })
-            
+
             alertController.addAction(cancelAction)
             alertController.addAction(deleteAction)
-            
+
             self.present(alertController, animated: true, completion: nil)
         }
     }

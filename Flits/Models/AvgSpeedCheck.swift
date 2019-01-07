@@ -11,7 +11,7 @@ import Firebase
 import ObjectMapper
 
 class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
-    
+
     // MARK: - Properties
     var id: String = ""
     let beginLocation: String
@@ -27,7 +27,7 @@ class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
     var hashValue: Int {
         return id.hashValue
     }
-    
+
     // MARK: - Constructors
     init(beginLocation: String, endLocation: String) {
         self.timeCreated = Date()
@@ -37,48 +37,48 @@ class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
         self.dislikes = []
         self.endLocation = endLocation
     }
-    
+
     // MARK: - ObjectMapper
     required init(map: Map) throws {
-        beginLocation   = try map.value("beginLocation")
-        endLocation     = try map.value("endLocation")
-        userID          = try map.value("user")
-        likes           = (try? map.value("likes")) ?? []
-        dislikes        = (try? map.value("dislikes")) ?? []
-        timeCreated     = try map.value("timeCreated", using: ISO8601DateTransform())
+        beginLocation = try map.value("beginLocation")
+        endLocation = try map.value("endLocation")
+        userID = try map.value("user")
+        likes = (try? map.value("likes")) ?? []
+        dislikes = (try? map.value("dislikes")) ?? []
+        timeCreated = try map.value("timeCreated", using: ISO8601DateTransform())
     }
-    
+
     func mapping(map: Map) {
-        beginLocation   >>> map["beginLocation"]
-        endLocation     >>> map["endLocation"]
-        userID          >>> map["user"]
-        timeCreated     >>> (map["timeCreated"], ISO8601DateTransform())
+        beginLocation >>> map["beginLocation"]
+        endLocation >>> map["endLocation"]
+        userID >>> map["user"]
+        timeCreated >>> (map["timeCreated"], ISO8601DateTransform())
     }
-    
+
     // MARK: - Functions
     func getLikes() -> Int {
         return likes.count
     }
-    
+
     func getDislikes() -> Int {
         return dislikes.count
     }
-    
+
     func like(userId: String) {
         removeLike(userId: userId)
         likes.insert(userId)
     }
-    
+
     func dislike(userId: String) {
         removeLike(userId: userId)
         dislikes.insert(userId)
     }
-    
+
     func removeLike(userId: String) {
         likes.remove(userId)
         dislikes.remove(userId)
     }
-    
+
     @discardableResult func toDatabase() -> DocumentReference {
         // Data from object in JSON
         let data = self.toJSON()
@@ -92,11 +92,11 @@ class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
         }
         return ref!
     }
-    
+
     func setId(id: String) {
         self.id = id
     }
-    
+
     // Equatable
     static func == (lhs: AvgSpeedCheck, rhs: AvgSpeedCheck) -> Bool {
         return lhs.id == rhs.id

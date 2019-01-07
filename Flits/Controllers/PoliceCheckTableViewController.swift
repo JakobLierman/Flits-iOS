@@ -12,7 +12,7 @@ import ObjectMapper
 import OrderedSet
 
 class PoliceCheckTableViewController: UITableViewController {
-    
+
     // MARK: - Properties
     var policeChecks: OrderedSet<PoliceCheck> = []
     // Firebase
@@ -20,7 +20,7 @@ class PoliceCheckTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Gets data from database and updates on changes
         db.collection("policeChecks").addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -41,7 +41,7 @@ class PoliceCheckTableViewController: UITableViewController {
             }
         }
     }
-    
+
     // Makes sure row does not stay selected
     override func viewWillAppear(_ animated: Bool) {
         if let index = self.tableView.indexPathForSelectedRow {
@@ -55,13 +55,13 @@ class PoliceCheckTableViewController: UITableViewController {
         // Return the amount of rows
         return policeChecks.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PoliceCheckCell", for: indexPath)
-        
+
         // Get policeCheck
         let policeCheck = policeChecks[indexPath.row]
-        
+
         // Configure the cell
         cell.textLabel?.text = policeCheck.location
         // Get timeCreated as readable format
@@ -70,16 +70,16 @@ class PoliceCheckTableViewController: UITableViewController {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale.current
         cell.detailTextLabel?.text = dateFormatter.string(from: policeCheck.timeCreated)
-        
+
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
-    
+
     // MARK: - Navigation
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! PoliceCheckDetailViewController

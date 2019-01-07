@@ -12,7 +12,7 @@ import ObjectMapper
 import OrderedSet
 
 class SpeedCamerasTableViewController: UITableViewController {
-    
+
     // MARK: - Properties
     var speedCameras: OrderedSet<SpeedCamera> = []
     // Firebase
@@ -26,7 +26,7 @@ class SpeedCamerasTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
+
         // Gets data from database and updates on changes
         /*db.collection("speedCameras").addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -57,9 +57,9 @@ class SpeedCamerasTableViewController: UITableViewController {
         let cam3 = SpeedCamera.init(location: "003", kind: "Vaste flitspaal", descriptionText: "", imagePath: "images/speedCameras/v7RxOTngeCzv6MZeIN9c.jpg")
         cam3.setId(id: "3")
         speedCameras.append(cam3)
-        
     }
-    
+
+    // Makes sure row does not stay selected
     override func viewWillAppear(_ animated: Bool) {
         if let index = self.tableView.indexPathForSelectedRow {
             self.tableView.deselectRow(at: index, animated: true)
@@ -69,13 +69,17 @@ class SpeedCamerasTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        // Return the amount of rows
         return speedCameras.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeedCameraCell", for: indexPath)
+
+        // Get speedCamera
         let speedCamera = speedCameras[indexPath.row]
+
+        // Configure the cell
         cell.textLabel?.text = speedCamera.location
         // Get timeCreated as readable format
         let dateFormatter = DateFormatter()
@@ -83,13 +87,16 @@ class SpeedCamerasTableViewController: UITableViewController {
         dateFormatter.timeStyle = .short
         dateFormatter.locale = Locale.current
         cell.detailTextLabel?.text = dateFormatter.string(from: speedCamera.timeCreated)
+
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
-    
+
+    // MARK: - Navigation
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! SpeedCameraDetailViewController
@@ -98,6 +105,7 @@ class SpeedCamerasTableViewController: UITableViewController {
             }
         }
     }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -130,16 +138,6 @@ class SpeedCamerasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

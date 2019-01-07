@@ -25,7 +25,7 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     var hasImage: Bool = false
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var kindLabel: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,30 +37,30 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
 
         // Input the data into the array
         speedCameraKindPickerData = ["Vaste flitspaal", "Mobiele radar", "Flitsauto", "Lidar (superflitspaal)"]
-        
+
         // Init imagePicker
         self.imagePicker = UIImagePickerController()
         self.imagePicker.delegate = self
-        
+
         // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     deinit {
         // Remove observer
         NotificationCenter.default.removeObserver(keyboardWillShow)
         NotificationCenter.default.removeObserver(keyboardWillHide)
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeField = nil
     }
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeField = textField
     }
-    
+
     // Change size of scrollView and scroll to field
     @objc func keyboardWillShow(notification: NSNotification) {
         if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
@@ -74,7 +74,7 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
             }
         }
     }
-    
+
     // Undo the above
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInsets = UIEdgeInsets.zero
@@ -112,17 +112,17 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     @IBAction func selectImageAction(_ sender: Any) {
         present(imagePicker, animated: true, completion: nil)
     }
-    
+
     // Upload image
     private func uploadImage(image: UIImage, path: String) {
         let storageRef = Storage.storage().reference(forURL: "gs://flits-hogent.appspot.com")
         var data = NSData()
         data = image.jpegData(compressionQuality: 0.8)! as NSData
-        let childUserImages = storageRef.child(path)
+        let childImages = storageRef.child(path)
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
         // Upload
-        childUserImages.putData(data as Data, metadata: metaData)
+        childImages.putData(data as Data, metadata: metaData)
     }
 
     // Number of columns of data
@@ -142,22 +142,22 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
     }
 
     // Select image and show in imageView
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
             hasImage = true
-            
+
             // Change button and image settings
             selectImageButton.setTitle("", for: .normal)
             imageView.contentMode = .scaleAspectFit
         }
         imagePicker.dismiss(animated: true, completion: nil)
     }
-    
+
     // Check if form is valid
     private func validForm() -> Bool {
         var isValid: Bool = true
-        
+
         // Check location
         locationLabel.textColor = UIColor.black
         if locationTextField.text!.isEmpty {
@@ -170,17 +170,17 @@ class AddSpeedCameraViewController: UIViewController, UITextFieldDelegate, UIPic
             kindLabel.textColor = UIColor.red
             isValid = false
         }
-        
+
         if !isValid {
             // Show alert if form is not filled in correctly
             let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
-        
+
         return isValid
     }
-    
+
     /*
      // MARK: - Navigation
      

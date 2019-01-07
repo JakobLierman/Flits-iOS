@@ -18,31 +18,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     weak var activeField: UITextField?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        
+
         // Add observers
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     deinit {
         // Remove observers
         NotificationCenter.default.removeObserver(keyboardWillShow)
         NotificationCenter.default.removeObserver(keyboardWillHide)
     }
-    
+
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeField = nil
     }
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         self.activeField = textField
     }
-    
+
     // Change size of scrollView and scroll to field
     @objc func keyboardWillShow(notification: NSNotification) {
         if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
@@ -56,14 +56,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
+
     // Undo the above
     @objc func keyboardWillHide(notification: NSNotification) {
         let contentInsets = UIEdgeInsets.zero
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
     }
-    
+
     // MARK: - Actions
     @IBAction func logInAction(_ sender: UIButton) {
         if validForm() {
@@ -83,7 +83,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
+
     // MARK: - Controlling the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == emailTextField {
@@ -93,11 +93,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-        
+
     // Check if form is valid
     private func validForm() -> Bool {
         var isValid: Bool = true
-        
+
         // Check email
         emailLabel.textColor = UIColor.black
         if emailTextField.text!.isEmpty {
@@ -110,14 +110,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordLabel.textColor = UIColor.red
             isValid = false
         }
-        
+
         if !isValid {
             // Show alert if form is not filled in correctly
             let alertController = UIAlertController(title: "Oeps", message: "Niet alle velden zijn correct ingevuld", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
-        
+
         return isValid
     }
 

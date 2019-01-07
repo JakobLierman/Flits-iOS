@@ -11,7 +11,7 @@ import Firebase
 import ObjectMapper
 
 class SpeedCamera: Item, ImmutableMappable, Hashable {
-    
+
     // MARK: Properties
     var id: String = ""
     let location: String
@@ -43,28 +43,28 @@ class SpeedCamera: Item, ImmutableMappable, Hashable {
         self.dislikes = []
         self.expireDate = calculateExpireDate()
     }
-    
+
     // MARK: - ObjectMapper
     required init(map: Map) throws {
-        location        = try map.value("location")
-        kind            = try map.value("kind")
+        location = try map.value("location")
+        kind = try map.value("kind")
         descriptionText = try? map.value("description")
-        imagePath       = try? map.value("image")
-        userID          = try map.value("user")
-        likes           = (try? map.value("likes")) ?? []
-        dislikes        = (try? map.value("dislikes")) ?? []
-        timeCreated     = try map.value("timeCreated", using: ISO8601DateTransform())
-        expireDate      = try? map.value("expireDate", using: ISO8601DateTransform())
+        imagePath = try? map.value("image")
+        userID = try map.value("user")
+        likes = (try? map.value("likes")) ?? []
+        dislikes = (try? map.value("dislikes")) ?? []
+        timeCreated = try map.value("timeCreated", using: ISO8601DateTransform())
+        expireDate = try? map.value("expireDate", using: ISO8601DateTransform())
     }
-    
+
     func mapping(map: Map) {
-        location        >>> map["location"]
-        kind            >>> map["kind"]
+        location >>> map["location"]
+        kind >>> map["kind"]
         descriptionText >>> map["description"]
-        imagePath       >>> map["image"]
-        userID          >>> map["user"]
-        timeCreated     >>> (map["timeCreated"], ISO8601DateTransform())
-        expireDate      >>> (map["expireDate"], ISO8601DateTransform())
+        imagePath >>> map["image"]
+        userID >>> map["user"]
+        timeCreated >>> (map["timeCreated"], ISO8601DateTransform())
+        expireDate >>> (map["expireDate"], ISO8601DateTransform())
     }
 
     // MARK: - Functions
@@ -82,30 +82,30 @@ class SpeedCamera: Item, ImmutableMappable, Hashable {
         }
         return expireDate
     }
-    
+
     func getLikes() -> Int {
         return likes.count
     }
-    
+
     func getDislikes() -> Int {
         return dislikes.count
     }
-    
+
     func like(userId: String) {
         removeLike(userId: userId)
         likes.insert(userId)
     }
-    
+
     func dislike(userId: String) {
         removeLike(userId: userId)
         dislikes.insert(userId)
     }
-    
+
     func removeLike(userId: String) {
         likes.remove(userId)
         dislikes.remove(userId)
     }
-    
+
     func toDatabase() -> DocumentReference {
         // Data from object in JSON
         let data = self.toJSON()
@@ -119,12 +119,12 @@ class SpeedCamera: Item, ImmutableMappable, Hashable {
         }
         return ref!
     }
-    
+
     // Adds imagePath to item in database
     func addImagePath(path: String) {
-        db.collection("speedCameras").document(ref!.documentID).setData(["image" : path], merge: true)
+        db.collection("speedCameras").document(ref!.documentID).setData(["image": path], merge: true)
     }
-    
+
     func setId(id: String) {
         self.id = id
     }

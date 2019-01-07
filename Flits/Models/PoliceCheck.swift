@@ -11,7 +11,7 @@ import Firebase
 import ObjectMapper
 
 class PoliceCheck: Item, ImmutableMappable, Hashable {
-    
+
     // MARK: Properties
     var id: String = ""
     let location: String
@@ -29,7 +29,7 @@ class PoliceCheck: Item, ImmutableMappable, Hashable {
     var hashValue: Int {
         return id.hashValue
     }
-    
+
     // MARK: - Constructors
     init(location: String, descriptionText: String? = nil, imagePath: String? = nil) {
         self.timeCreated = Date()
@@ -41,52 +41,52 @@ class PoliceCheck: Item, ImmutableMappable, Hashable {
         self.dislikes = []
         self.expireDate = Date(timeInterval: 21600, since: timeCreated)
     }
-    
+
     // MARK: - ObjectMapper
     required init(map: Map) throws {
-        location        = try map.value("location")
+        location = try map.value("location")
         descriptionText = try? map.value("description")
-        imagePath       = try? map.value("image")
-        userID          = try map.value("user")
-        likes           = (try? map.value("likes")) ?? []
-        dislikes        = (try? map.value("dislikes")) ?? []
-        timeCreated     = try map.value("timeCreated", using: ISO8601DateTransform())
-        expireDate      = try map.value("expireDate", using: ISO8601DateTransform())
+        imagePath = try? map.value("image")
+        userID = try map.value("user")
+        likes = (try? map.value("likes")) ?? []
+        dislikes = (try? map.value("dislikes")) ?? []
+        timeCreated = try map.value("timeCreated", using: ISO8601DateTransform())
+        expireDate = try map.value("expireDate", using: ISO8601DateTransform())
     }
-    
+
     func mapping(map: Map) {
-        location        >>> map["location"]
+        location >>> map["location"]
         descriptionText >>> map["description"]
-        imagePath       >>> map["image"]
-        userID          >>> map["user"]
-        timeCreated     >>> (map["timeCreated"], ISO8601DateTransform())
-        expireDate      >>> (map["expireDate"], ISO8601DateTransform())
+        imagePath >>> map["image"]
+        userID >>> map["user"]
+        timeCreated >>> (map["timeCreated"], ISO8601DateTransform())
+        expireDate >>> (map["expireDate"], ISO8601DateTransform())
     }
-    
+
     // MARK: - Functions
     func getLikes() -> Int {
         return likes.count
     }
-    
+
     func getDislikes() -> Int {
         return dislikes.count
     }
-    
+
     func like(userId: String) {
         removeLike(userId: userId)
         likes.insert(userId)
     }
-    
+
     func dislike(userId: String) {
         removeLike(userId: userId)
         dislikes.insert(userId)
     }
-    
+
     func removeLike(userId: String) {
         likes.remove(userId)
         dislikes.remove(userId)
     }
-    
+
     func toDatabase() -> DocumentReference {
         // Data from object in JSON
         let data = self.toJSON()
@@ -100,19 +100,19 @@ class PoliceCheck: Item, ImmutableMappable, Hashable {
         }
         return ref!
     }
-    
+
     // Adds imagePath to item in database
     func addImagePath(path: String) {
-        db.collection("policeChecks").document(ref!.documentID).setData(["image" : path], merge: true)
+        db.collection("policeChecks").document(ref!.documentID).setData(["image": path], merge: true)
     }
-    
+
     func setId(id: String) {
         self.id = id
     }
-    
+
     // Equatable
     static func == (lhs: PoliceCheck, rhs: PoliceCheck) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
 }

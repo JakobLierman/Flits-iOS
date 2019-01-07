@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class PoliceCheckDetailViewController: UIViewController {
-    
+
     // MARK: - Properties
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var locationText: UILabel!
@@ -18,7 +18,7 @@ class PoliceCheckDetailViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     // Firebase
     let db = Firestore.firestore()
-    
+
     var policeCheck: PoliceCheck? {
         didSet {
             refreshUI()
@@ -30,7 +30,7 @@ class PoliceCheckDetailViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     // Loads data in view
     private func refreshUI() {
         loadViewIfNeeded()
@@ -58,17 +58,17 @@ class PoliceCheckDetailViewController: UIViewController {
             deleteButton.isEnabled = true
         }
     }
-    
+
     // MARK: - Actions
     @IBAction func doneAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func deleteAction(_ sender: Any) {
         if Auth.auth().currentUser?.uid == policeCheck?.userID {
             // Show confirmation alert
             let alertController = UIAlertController(title: "Controle verwijderen", message: "Bent u zeker?", preferredStyle: .alert)
-            
+
             let cancelAction = UIAlertAction(title: "Annuleren", style: .cancel, handler: nil)
             let deleteAction = UIAlertAction(title: "Verwijderen", style: .destructive, handler: { (UIAlertAction) in
                 // Delete item from database
@@ -80,10 +80,10 @@ class PoliceCheckDetailViewController: UIViewController {
                     }
                 }
             })
-            
+
             alertController.addAction(cancelAction)
             alertController.addAction(deleteAction)
-            
+
             self.present(alertController, animated: true, completion: nil)
         }
     }

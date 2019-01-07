@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class SpeedCameraDetailViewController: UIViewController {
-    
+
     // MARK: - Properties
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @IBOutlet weak var locationText: UILabel!
@@ -19,20 +19,21 @@ class SpeedCameraDetailViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     // Firebase
     let db = Firestore.firestore()
-    
+
     var speedCamera: SpeedCamera? {
         didSet {
             refreshUI()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-    func refreshUI() {
+
+    // Loads data in view
+    private func refreshUI() {
         loadViewIfNeeded()
         locationText.text = speedCamera?.location
         if (speedCamera?.descriptionText!.isEmpty)! {
@@ -59,17 +60,17 @@ class SpeedCameraDetailViewController: UIViewController {
             deleteButton.isEnabled = true
         }
     }
-    
+
     // MARK: - Actions
     @IBAction func doneAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     @IBAction func deleteAction(_ sender: Any) {
         if Auth.auth().currentUser?.uid == speedCamera?.userID {
             // Show confirmation alert
             let alertController = UIAlertController(title: "Flitser verwijderen", message: "Bent u zeker?", preferredStyle: .alert)
-           
+
             let cancelAction = UIAlertAction(title: "Annuleren", style: .cancel, handler: nil)
             let deleteAction = UIAlertAction(title: "Verwijderen", style: .destructive, handler: { (UIAlertAction) in
                 // Delete item from database
@@ -81,14 +82,14 @@ class SpeedCameraDetailViewController: UIViewController {
                     }
                 }
             })
-            
+
             alertController.addAction(cancelAction)
             alertController.addAction(deleteAction)
-            
+
             self.present(alertController, animated: true, completion: nil)
         }
     }
-    
+
     /*
     // MARK: - Navigation
 

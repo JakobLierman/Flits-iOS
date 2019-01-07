@@ -12,7 +12,7 @@ import ObjectMapper
 import OrderedSet
 
 class AvgSpeedCheckTableViewController: UITableViewController {
-    
+
     // MARK: - Properties
     var avgSpeedChecks: OrderedSet<AvgSpeedCheck> = []
     // Firebase
@@ -20,7 +20,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Gets data from database and updates on changes
         db.collection("avgSpeedChecks").addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -41,7 +41,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
             }
         }
     }
-    
+
     // Makes sure row does not stay selected
     override func viewWillAppear(_ animated: Bool) {
         if let index = self.tableView.indexPathForSelectedRow {
@@ -58,7 +58,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AvgSpeedCheckCell", for: indexPath)
-        
+
         // Get avgSpeedCheck
         let avgSpeedCheck = avgSpeedChecks[indexPath.row]
 
@@ -73,13 +73,13 @@ class AvgSpeedCheckTableViewController: UITableViewController {
 
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "showDetail", sender: self)
     }
-    
+
     // MARK: - Navigation
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! AvgSpeedCheckDetailViewController
