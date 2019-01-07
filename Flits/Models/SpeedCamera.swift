@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class SpeedCamera: Item, ImmutableMappable, Hashable {
+class SpeedCamera: Item, ImmutableMappable, Hashable, Comparable {
 
     // MARK: Properties
     var id: String = ""
@@ -132,5 +132,10 @@ class SpeedCamera: Item, ImmutableMappable, Hashable {
     // Equatable
     static func == (lhs: SpeedCamera, rhs: SpeedCamera) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    // Comparable
+    static func < (lhs: SpeedCamera, rhs: SpeedCamera) -> Bool {
+        return lhs.timeCreated < rhs.timeCreated
     }
 }

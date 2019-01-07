@@ -54,7 +54,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AvgSpeedCheckCell", for: indexPath)
 
         // Get avgSpeedCheck
-        let avgSpeedCheck = avgSpeedChecks[indexPath.row]
+        let avgSpeedCheck = avgSpeedChecks.sorted().reversed()[indexPath.row]
 
         // Configure the cell
         cell.textLabel?.text = avgSpeedCheck.beginLocation
@@ -81,7 +81,7 @@ class AvgSpeedCheckTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! AvgSpeedCheckDetailViewController
             if let index = self.tableView.indexPathForSelectedRow {
-                detailViewController.avgSpeedCheck = avgSpeedChecks[index.row]
+                detailViewController.avgSpeedCheck = avgSpeedChecks.sorted().reversed()[index.row]
             }
         }
     }

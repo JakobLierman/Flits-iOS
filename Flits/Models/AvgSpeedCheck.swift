@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
+class AvgSpeedCheck: Item, ImmutableMappable, Hashable, Comparable {
 
     // MARK: - Properties
     var id: String = ""
@@ -100,6 +100,11 @@ class AvgSpeedCheck: Item, ImmutableMappable, Hashable {
     // Equatable
     static func == (lhs: AvgSpeedCheck, rhs: AvgSpeedCheck) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    // Comparable
+    static func < (lhs: AvgSpeedCheck, rhs: AvgSpeedCheck) -> Bool {
+        return lhs.timeCreated < rhs.timeCreated
     }
 
 }

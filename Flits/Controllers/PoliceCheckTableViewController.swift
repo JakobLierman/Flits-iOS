@@ -54,7 +54,7 @@ class PoliceCheckTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PoliceCheckCell", for: indexPath)
 
         // Get policeCheck
-        let policeCheck = policeChecks[indexPath.row]
+        let policeCheck = policeChecks.sorted().reversed()[indexPath.row]
 
         // Configure the cell
         cell.textLabel?.text = policeCheck.location
@@ -81,7 +81,7 @@ class PoliceCheckTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! PoliceCheckDetailViewController
             if let index = self.tableView.indexPathForSelectedRow {
-                detailViewController.policeCheck = policeChecks[index.row]
+                detailViewController.policeCheck = policeChecks.sorted().reversed()[index.row]
             }
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 import ObjectMapper
 
-class PoliceCheck: Item, ImmutableMappable, Hashable {
+class PoliceCheck: Item, ImmutableMappable, Hashable, Comparable {
 
     // MARK: Properties
     var id: String = ""
@@ -113,6 +113,11 @@ class PoliceCheck: Item, ImmutableMappable, Hashable {
     // Equatable
     static func == (lhs: PoliceCheck, rhs: PoliceCheck) -> Bool {
         return lhs.id == rhs.id
+    }
+    
+    // Comparable
+    static func < (lhs: PoliceCheck, rhs: PoliceCheck) -> Bool {
+        return lhs.timeCreated < rhs.timeCreated
     }
 
 }

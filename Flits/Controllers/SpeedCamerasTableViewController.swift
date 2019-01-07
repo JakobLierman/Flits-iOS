@@ -54,7 +54,7 @@ class SpeedCamerasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeedCameraCell", for: indexPath)
 
         // Get speedCamera
-        let speedCamera = speedCameras[indexPath.row]
+        let speedCamera = speedCameras.sorted().reversed()[indexPath.row]
 
         // Configure the cell
         cell.textLabel?.text = speedCamera.location
@@ -81,7 +81,7 @@ class SpeedCamerasTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! SpeedCameraDetailViewController
             if let index = self.tableView.indexPathForSelectedRow {
-                detailViewController.speedCamera = speedCameras[index.row]
+                detailViewController.speedCamera = speedCameras.sorted().reversed()[index.row]
             }
         }
     }
