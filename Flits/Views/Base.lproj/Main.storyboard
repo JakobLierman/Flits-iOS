@@ -1156,7 +1156,11 @@
                         <viewLayoutGuide key="safeArea" id="XT5-nG-Kte"/>
                     </view>
                     <navigationItem key="navigationItem" title="Flitser" id="Xpp-rj-4V4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="I4r-5a-ZUW"/>
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="trash" id="I4r-5a-ZUW">
+                            <connections>
+                                <action selector="deleteAction:" destination="eOB-Ez-QrL" id="ZMG-ru-q6S"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="ERa-yD-49q">
                             <connections>
                                 <action selector="doneAction:" destination="eOB-Ez-QrL" id="mBU-PY-YY2"/>
@@ -1164,6 +1168,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="I4r-5a-ZUW" id="IJt-qx-axO"/>
                         <outlet property="descriptionText" destination="24a-E9-9kQ" id="oei-kQ-ocQ"/>
                         <outlet property="image" destination="16B-0O-drT" id="xij-GG-zex"/>
                         <outlet property="kindText" destination="C04-PY-Hil" id="Xia-3q-ArH"/>
@@ -1275,7 +1280,7 @@
                         <viewLayoutGuide key="safeArea" id="TvU-Td-zkJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trajectcontrole" id="YFb-9y-YTd">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="7JM-Ep-0Xk"/>
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="trash" id="7JM-Ep-0Xk"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="KfE-Eh-bJx"/>
                     </navigationItem>
                 </viewController>
@@ -1286,7 +1291,6 @@
         <!--Navigation Controller-->
         <scene sceneID="4p0-vf-lhP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ivr-eM-rdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Uj8-wM-Sk8" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rEG-0w-2pE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1296,6 +1300,7 @@
                         <segue destination="kmP-9z-fRc" kind="relationship" relationship="rootViewController" id="7AE-8D-X2g"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivr-eM-rdb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4516" y="-72"/>
         </scene>
@@ -1328,7 +1333,7 @@
                         <viewLayoutGuide key="safeArea" id="acs-lu-dhl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Controle" id="MAs-im-qG3">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="9dU-Xs-Uax"/>
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" systemItem="trash" id="9dU-Xs-Uax"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="W05-Ar-CRp"/>
                     </navigationItem>
                 </viewController>
