@@ -1,10 +1,5 @@
-//
-//  OrderedSet.swift
-//  Weebly
-//
-//  Created by James Richard on 10/22/14.
-//  Copyright (c) 2014 Weebly.
-//
+//  Copyright (c) 2014 James Richard. 
+//  Distributed under the MIT License (http://opensource.org/licenses/MIT).
 
 /// An ordered, unique collection of objects.
 public class OrderedSet<T: Hashable> {
@@ -97,12 +92,14 @@ public class OrderedSet<T: Hashable> {
      If it is not the last object in the ordered set, subsequent
      objects will be shifted down one position.
      - parameter    object: The object to be removed.
+     - returns: The former index position of the object.
      */
-    public func remove(_ object: T) {
+    @discardableResult
+    public func remove(_ object: T) -> Index? {
         if let index = contents[object] {
             contents[object] = nil
-            sequencedContents[index].deinitialize()
-            sequencedContents[index].deallocate(capacity: 1)
+            sequencedContents[index].deinitialize(count: 1)
+            sequencedContents[index].deallocate()
             sequencedContents.remove(at: index)
             
             for (object, i) in contents {
@@ -112,18 +109,32 @@ public class OrderedSet<T: Hashable> {
                 
                 contents[object] = i - 1
             }
+            
+            return index
         }
+        return nil
     }
     
     /**
      Removes the given objects from the ordered set.
      - parameter    objects:    The objects to be removed.
+     - returns: A collection of the former index positions of the objects. An index position is not provided for objects that were not found.
      */
-    public func remove<S: Sequence>(_ objects: S) where S.Iterator.Element == T {
+    @discardableResult
+    public func remove<S: Sequence>(_ objects: S) -> [Index]? where S.Iterator.Element == T {
+        
+        var indexes = [Index]()
+        objects.forEach { object in
+            if let index = index(of: object) {
+                indexes.append(index)
+            }
+        }
+        
         var gen = objects.makeIterator()
         while let object: T = gen.next() {
             remove(object)
         }
+        return indexes
     }
     
     /**
@@ -146,8 +157,8 @@ public class OrderedSet<T: Hashable> {
         contents.removeAll()
         
         for sequencedContent in sequencedContents {
-            sequencedContent.deinitialize()
-            sequencedContent.deallocate(capacity: 1)
+            sequencedContent.deinitialize(count: 1)
+            sequencedContent.deallocate()
         }
         
         sequencedContents.removeAll()
@@ -373,8 +384,8 @@ extension OrderedSet {
             if contents.count == previousCount {
                 sequencedContents[index].pointee = newValue
             } else {
-                sequencedContents[index].deinitialize()
-                sequencedContents[index].deallocate(capacity: 1)
+                sequencedContents[index].deinitialize(count: 1)
+                sequencedContents[index].deallocate()
                 sequencedContents.remove(at: index)
             }
         }
@@ -447,5 +458,3 @@ extension OrderedSet: CustomStringConvertible {
         return "OrderedSet (\(count) object(s)): [\(children)]"
     }
 }
-
-

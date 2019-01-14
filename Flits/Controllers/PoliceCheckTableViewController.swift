@@ -44,7 +44,6 @@ class PoliceCheckTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the amount of rows
         return policeChecks.count
@@ -81,7 +80,6 @@ class PoliceCheckTableViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailViewController = (segue.destination as! UINavigationController).topViewController as! PoliceCheckDetailViewController

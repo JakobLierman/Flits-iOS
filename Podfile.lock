@@ -106,8 +106,8 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
-  - ObjectMapper (3.4.1)
-  - OrderedSet (3.0.0)
+  - ObjectMapper (3.4.2)
+  - OrderedSet (3.1.0)
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
@@ -157,8 +157,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
-  ObjectMapper: 5311bd50ca732930959e7ca1a2de43ab823a5ced
-  OrderedSet: b990e16dcf6b79f1d3826b996b1eb613c696eec0
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  OrderedSet: 489d84c7469d5aa7658c78f66259c87d878a2dfb
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
 PODFILE CHECKSUM: 3bfa0d6197a8296ef06eded48880f5f1a62546cf
