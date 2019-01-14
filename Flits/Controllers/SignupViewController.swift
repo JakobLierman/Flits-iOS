@@ -146,7 +146,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             }
         }
 
-        return false
+        return isValid
     }
 
 }
