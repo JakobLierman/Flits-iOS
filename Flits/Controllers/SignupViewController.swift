@@ -68,7 +68,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Actions
-    @IBAction func signUpAction(_ sender: UIButton) {
+    @IBAction func signUpAction(_ sender: Any) {
         if validForm() {
             Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if error == nil {
@@ -98,7 +98,17 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - Controlling the keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        switch textField {
+        case fullNameTextField:
+            emailTextField.becomeFirstResponder()
+        case emailTextField:
+            passwordTextField.becomeFirstResponder()
+        case passwordTextField:
+            passwordConfirmTextField.becomeFirstResponder()
+        default:
+            textField.resignFirstResponder()
+            signUpAction(textField)
+        }
         return true
     }
 

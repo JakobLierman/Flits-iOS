@@ -130,7 +130,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="HC8-F5-MyJ" id="9HA-uh-NGp"/>
                                                 </connections>
@@ -146,7 +146,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="HC8-F5-MyJ" id="9NA-U8-SCX"/>
                                                 </connections>
@@ -262,7 +262,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="YJj-2w-AqY"/>
                                                 </connections>
@@ -278,7 +278,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="fKQ-Tx-Aye"/>
                                                 </connections>
@@ -294,7 +294,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="n31-x2-NCe"/>
                                                 </connections>
@@ -304,7 +304,7 @@
                                                 <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="new-password"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="nyg-oF-Vti" id="Kr1-8H-Wu1"/>
                                                 </connections>
@@ -1727,7 +1727,7 @@
         <image name="icon_Circular" width="1024.3199462890625" height="1024.3199462890625"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O7N-Pq-b7q"/>
+        <segue reference="CzA-wk-DHI"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.83696061369999997" green="0.29127943519999999" blue="0.26271748540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

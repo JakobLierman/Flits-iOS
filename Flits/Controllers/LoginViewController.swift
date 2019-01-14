@@ -65,7 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Actions
-    @IBAction func logInAction(_ sender: UIButton) {
+    @IBAction func logInAction(_ sender: Any) {
         if validForm() {
             // Log user in
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
@@ -90,6 +90,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
+            logInAction(textField)
         }
         return true
     }
