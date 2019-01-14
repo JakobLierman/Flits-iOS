@@ -39,6 +39,8 @@
 		3648CA4A21E357BB009CA4E9 /* PoliceCheckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceCheckDetailViewController.swift; sourceTree = "<group>"; };
 		3648CA4C21E357CA009CA4E9 /* AvgSpeedCheckDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvgSpeedCheckDetailViewController.swift; sourceTree = "<group>"; };
 		368B065321E2704D00C0ED9A /* SpeedCamerasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedCamerasTableViewController.swift; sourceTree = "<group>"; };
+		368F85EE21ECCD8C00FCAD9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		368F85EF21ECCD8C00FCAD9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		36A39B7021CBDF2700AF5C15 /* Flits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A39B7321CBDF2700AF5C15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A39B7521CBDF2700AF5C15 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 			children = (
 				36A39B7D21CBDF2900AF5C15 /* Base */,
 				36A39B9E21CFCD5D00AF5C15 /* nl-BE */,
+				368F85EE21ECCD8C00FCAD9A /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 			children = (
 				36A39B9821CBE76300AF5C15 /* Base */,
 				36A39B9F21CFCD5F00AF5C15 /* nl-BE */,
+				368F85EF21ECCD8C00FCAD9A /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

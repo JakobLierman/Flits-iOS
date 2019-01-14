@@ -1,21 +1,21 @@
 
 /* Class = "UINavigationItem"; title = "Controles"; ObjectID = "00P-9f-zlT"; */
-"00P-9f-zlT.title" = "Controles";
+"00P-9f-zlT.title" = "Police Checks";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "0wM-jF-xww"; */
 "0wM-jF-xww.text" = "Title";
 
 /* Class = "UIButton"; normalTitle = "Afbeelding uploaden"; ObjectID = "1Th-Lx-YI0"; */
-"1Th-Lx-YI0.normalTitle" = "Afbeelding uploaden";
+"1Th-Lx-YI0.normalTitle" = "Upload image";
 
 /* Class = "UILabel"; text = "descriptionText"; ObjectID = "24a-E9-9kQ"; */
 "24a-E9-9kQ.text" = "descriptionText";
 
 /* Class = "UILabel"; text = "Omschrijving"; ObjectID = "2R3-on-2XO"; */
-"2R3-on-2XO.text" = "Omschrijving";
+"2R3-on-2XO.text" = "Description";
 
 /* Class = "UILabel"; text = "Locatie"; ObjectID = "2Wp-kg-5vW"; */
-"2Wp-kg-5vW.text" = "Locatie";
+"2Wp-kg-5vW.text" = "Location";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "3VH-oz-zob"; */
 "3VH-oz-zob.text" = "Subtitle";
@@ -24,13 +24,13 @@
 "4H0-Hg-JYa.text" = "locationText";
 
 /* Class = "UILabel"; text = "Emailadres"; ObjectID = "4W4-Lt-K9a"; */
-"4W4-Lt-K9a.text" = "Emailadres";
+"4W4-Lt-K9a.text" = "Email address";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "55x-M0-Pux"; */
 "55x-M0-Pux.text" = "Title";
 
 /* Class = "UILabel"; text = "Afbeelding"; ObjectID = "59n-LT-aOW"; */
-"59n-LT-aOW.text" = "Afbeelding";
+"59n-LT-aOW.text" = "Image";
 
 /* Class = "UITableViewController"; title = "AvgSpeedChecks"; ObjectID = "5Q0-Ew-oWf"; */
 "5Q0-Ew-oWf.title" = "AvgSpeedChecks";
@@ -39,58 +39,58 @@
 "6a6-jG-jih.text" = "locationText";
 
 /* Class = "UIBarButtonItem"; title = "Annuleren"; ObjectID = "6pm-RS-GgO"; */
-"6pm-RS-GgO.title" = "Annuleren";
+"6pm-RS-GgO.title" = "Cancel";
 
 /* Class = "UIButton"; normalTitle = "Maak een account"; ObjectID = "9hD-wo-vCE"; */
-"9hD-wo-vCE.normalTitle" = "Maak een account";
+"9hD-wo-vCE.normalTitle" = "Create an account";
 
 /* Class = "UILabel"; text = "Wachtwoord"; ObjectID = "9tl-M8-NNt"; */
-"9tl-M8-NNt.text" = "Wachtwoord";
+"9tl-M8-NNt.text" = "Password";
 
 /* Class = "UILabel"; text = "Emailadres"; ObjectID = "AxJ-TU-zpW"; */
-"AxJ-TU-zpW.text" = "Emailadres";
+"AxJ-TU-zpW.text" = "Email address";
 
 /* Class = "UITextField"; placeholder = "Wachtwoord"; ObjectID = "Bv0-15-fdv"; */
-"Bv0-15-fdv.placeholder" = "Wachtwoord";
+"Bv0-15-fdv.placeholder" = "Password";
 
 /* Class = "UILabel"; text = "kindText"; ObjectID = "C04-PY-Hil"; */
 "C04-PY-Hil.text" = "kindText";
 
 /* Class = "UIBarButtonItem"; title = "Terug"; ObjectID = "CE4-R9-6BR"; */
-"CE4-R9-6BR.title" = "Terug";
+"CE4-R9-6BR.title" = "Back";
 
 /* Class = "UIButton"; normalTitle = "Inloggen"; ObjectID = "CkP-rB-U6M"; */
-"CkP-rB-U6M.normalTitle" = "Inloggen";
+"CkP-rB-U6M.normalTitle" = "Log In";
 
 /* Class = "UILabel"; text = "Afbeelding"; ObjectID = "CnT-TV-QZP"; */
-"CnT-TV-QZP.text" = "Afbeelding";
+"CnT-TV-QZP.text" = "Image";
 
 /* Class = "UILabel"; text = "Locatie"; ObjectID = "Dae-D9-b9j"; */
-"Dae-D9-b9j.text" = "Locatie";
+"Dae-D9-b9j.text" = "Location";
 
 /* Class = "UILabel"; text = "Wachtwoord"; ObjectID = "Dse-XH-2zQ"; */
-"Dse-XH-2zQ.text" = "Wachtwoord";
+"Dse-XH-2zQ.text" = "Password";
 
 /* Class = "UITextField"; placeholder = "Adres of herkenningspunt"; ObjectID = "Fme-cr-ag0"; */
-"Fme-cr-ag0.placeholder" = "Adres of herkenningspunt";
+"Fme-cr-ag0.placeholder" = "Address or landmark";
 
 /* Class = "UIViewController"; title = "Inloggen"; ObjectID = "HC8-F5-MyJ"; */
-"HC8-F5-MyJ.title" = "Inloggen";
+"HC8-F5-MyJ.title" = "Log In";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "Iyd-JX-j3G"; */
 "Iyd-JX-j3G.text" = "Subtitle";
 
 /* Class = "UIBarButtonItem"; title = "Opslaan"; ObjectID = "J36-e4-8Ak"; */
-"J36-e4-8Ak.title" = "Opslaan";
+"J36-e4-8Ak.title" = "Save";
 
 /* Class = "UILabel"; text = "Wachtwoord wijzigen"; ObjectID = "KAG-MJ-w1X"; */
-"KAG-MJ-w1X.text" = "Wachtwoord wijzigen";
+"KAG-MJ-w1X.text" = "Change password";
 
 /* Class = "UINavigationItem"; title = "Controle"; ObjectID = "MAs-im-qG3"; */
-"MAs-im-qG3.title" = "Controle";
+"MAs-im-qG3.title" = "Police check";
 
 /* Class = "UINavigationItem"; title = "Trajectcontroles"; ObjectID = "Nm1-Kv-GlJ"; */
-"Nm1-Kv-GlJ.title" = "Trajectcontroles";
+"Nm1-Kv-GlJ.title" = "Average Speed Check";
 
 /* Class = "UILabel"; text = "Jakob Lierman"; ObjectID = "O2S-f6-vfw"; */
 "O2S-f6-vfw.text" = "Jakob Lierman";
@@ -102,10 +102,10 @@
 "Pwa-uF-MkE.title" = "Settings";
 
 /* Class = "UINavigationItem"; title = "Instellingen"; ObjectID = "Q2y-Ac-rAQ"; */
-"Q2y-Ac-rAQ.title" = "Instellingen";
+"Q2y-Ac-rAQ.title" = "Settings";
 
 /* Class = "UILabel"; text = "Omschrijving"; ObjectID = "QDY-bn-pCe"; */
-"QDY-bn-pCe.text" = "Omschrijving";
+"QDY-bn-pCe.text" = "Description";
 
 /* Class = "UIViewController"; title = "AddAvgSpeedCheck"; ObjectID = "Qah-wv-6bo"; */
 "Qah-wv-6bo.title" = "AddAvgSpeedCheck";
@@ -114,166 +114,166 @@
 "S0O-FO-n8J.title" = "AddSpeedCamera";
 
 /* Class = "UIBarButtonItem"; title = "Opslaan"; ObjectID = "S2I-ZY-Ye4"; */
-"S2I-ZY-Ye4.title" = "Opslaan";
+"S2I-ZY-Ye4.title" = "Save";
 
 /* Class = "UILabel"; text = "Beginlocatie"; ObjectID = "Syd-Pi-S6O"; */
-"Syd-Pi-S6O.text" = "Beginlocatie";
+"Syd-Pi-S6O.text" = "Beginlocation";
 
 /* Class = "UIButton"; normalTitle = "Afbeelding uploaden"; ObjectID = "TG2-Zn-BFx"; */
-"TG2-Zn-BFx.normalTitle" = "Afbeelding uploaden";
+"TG2-Zn-BFx.normalTitle" = "Upload image";
 
 /* Class = "UIBarButtonItem"; title = "Annuleren"; ObjectID = "TIC-YF-ExB"; */
-"TIC-YF-ExB.title" = "Annuleren";
+"TIC-YF-ExB.title" = "Cancel";
 
 /* Class = "UITextField"; placeholder = "Adres of herkenningspunt"; ObjectID = "TyV-f7-WHh"; */
-"TyV-f7-WHh.placeholder" = "Adres of herkenningspunt";
+"TyV-f7-WHh.placeholder" = "Address or landmark";
 
 /* Class = "UILabel"; text = "Locatie"; ObjectID = "U1B-JU-bbm"; */
-"U1B-JU-bbm.text" = "Locatie";
+"U1B-JU-bbm.text" = "Location";
 
 /* Class = "UITabBarItem"; title = "Flitsers"; ObjectID = "Uiu-oq-Zy0"; */
-"Uiu-oq-Zy0.title" = "Flitsers";
+"Uiu-oq-Zy0.title" = "Speed Cameras";
 
 /* Class = "UILabel"; text = "endLocationText"; ObjectID = "Ut0-cH-PDv"; */
 "Ut0-cH-PDv.text" = "endLocationText";
 
 /* Class = "UILabel"; text = "(Optioneel)"; ObjectID = "WlS-so-Em6"; */
-"WlS-so-Em6.text" = "(Optioneel)";
+"WlS-so-Em6.text" = "(Optional)";
 
 /* Class = "UITextField"; placeholder = "Emailadres"; ObjectID = "XKe-Dq-Zs9"; */
-"XKe-Dq-Zs9.placeholder" = "Emailadres";
+"XKe-Dq-Zs9.placeholder" = "Email Address";
 
 /* Class = "UILabel"; text = "Soort flitspaal"; ObjectID = "Xag-Sn-NKU"; */
-"Xag-Sn-NKU.text" = "Soort flitspaal";
+"Xag-Sn-NKU.text" = "Kind of speed camera";
 
 /* Class = "UINavigationItem"; title = "Flits"; ObjectID = "XkP-vh-aco"; */
 "XkP-vh-aco.title" = "Flits";
 
 /* Class = "UINavigationItem"; title = "Flitser"; ObjectID = "Xpp-rj-4V4"; */
-"Xpp-rj-4V4.title" = "Flitser";
+"Xpp-rj-4V4.title" = "Speed Camera";
 
 /* Class = "UINavigationItem"; title = "Trajectcontrole"; ObjectID = "YFb-9y-YTd"; */
-"YFb-9y-YTd.title" = "Trajectcontrole";
+"YFb-9y-YTd.title" = "Average Speed Check";
 
 /* Class = "UILabel"; text = "Beginlocatie"; ObjectID = "aUi-Kk-66A"; */
-"aUi-Kk-66A.text" = "Beginlocatie";
+"aUi-Kk-66A.text" = "Beginlocation";
 
 /* Class = "UITextField"; placeholder = "Emailadres"; ObjectID = "bEc-6q-lch"; */
-"bEc-6q-lch.placeholder" = "Emailadres";
+"bEc-6q-lch.placeholder" = "Email Address";
 
 /* Class = "UITabBarItem"; title = "Instellingen"; ObjectID = "cGQ-0v-Lc2"; */
-"cGQ-0v-Lc2.title" = "Instellingen";
+"cGQ-0v-Lc2.title" = "Settings";
 
 /* Class = "UINavigationItem"; title = "Nieuw"; ObjectID = "cIj-uj-A5r"; */
-"cIj-uj-A5r.title" = "Nieuw";
+"cIj-uj-A5r.title" = "New";
 
 /* Class = "UIButton"; normalTitle = "Uitloggen"; ObjectID = "cep-j3-yHf"; */
-"cep-j3-yHf.normalTitle" = "Uitloggen";
+"cep-j3-yHf.normalTitle" = "Log Out";
 
 /* Class = "UITextField"; placeholder = "Omschrijving van de locatie en/of situatie"; ObjectID = "e4d-Zi-0Jc"; */
-"e4d-Zi-0Jc.placeholder" = "Omschrijving van de locatie en/of situatie";
+"e4d-Zi-0Jc.placeholder" = "Description of the location and/or situation";
 
 /* Class = "UIButton"; normalTitle = "Registreren"; ObjectID = "eZG-n7-lrb"; */
-"eZG-n7-lrb.normalTitle" = "Registreren";
+"eZG-n7-lrb.normalTitle" = "Sign Up";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "g6z-FW-m6Y"; */
 "g6z-FW-m6Y.text" = "Title";
 
 /* Class = "UILabel"; text = "(Optioneel)"; ObjectID = "hTG-CB-AqS"; */
-"hTG-CB-AqS.text" = "(Optioneel)";
+"hTG-CB-AqS.text" = "(Optional)";
 
 /* Class = "UITextField"; placeholder = "Adres of herkenningspunt"; ObjectID = "htl-m0-Lyv"; */
-"htl-m0-Lyv.placeholder" = "Adres of herkenningspunt";
+"htl-m0-Lyv.placeholder" = "Address or landmark";
 
 /* Class = "UITextField"; placeholder = "Wachtwoord herhalen"; ObjectID = "i0M-PD-zv6"; */
-"i0M-PD-zv6.placeholder" = "Wachtwoord herhalen";
+"i0M-PD-zv6.placeholder" = "Repeat password";
 
 /* Class = "UILabel"; text = "iOS application to share police speed traps with other users. Created to learn iOS development using Swift."; ObjectID = "i3i-M4-KH9"; */
 "i3i-M4-KH9.text" = "iOS application to share police speed traps with other users. Created to learn iOS development using Swift.";
 
 /* Class = "UILabel"; text = "Omschrijving"; ObjectID = "im8-tc-N4X"; */
-"im8-tc-N4X.text" = "Omschrijving";
+"im8-tc-N4X.text" = "Description";
 
 /* Class = "UITextField"; placeholder = "Wachtwoord"; ObjectID = "jLR-9g-2kv"; */
-"jLR-9g-2kv.placeholder" = "Wachtwoord";
+"jLR-9g-2kv.placeholder" = "Password";
 
 /* Class = "UIButton"; normalTitle = "Heb je al een account? Log in."; ObjectID = "lYq-gj-PK8"; */
-"lYq-gj-PK8.normalTitle" = "Heb je al een account? Log in.";
+"lYq-gj-PK8.normalTitle" = "Do you already have an account? Log in.";
 
 /* Class = "UITextField"; placeholder = "Adres of herkenningspunt"; ObjectID = "lk5-wF-Fwf"; */
-"lk5-wF-Fwf.placeholder" = "Adres of herkenningspunt";
+"lk5-wF-Fwf.placeholder" = "Address or landmark";
 
 /* Class = "UILabel"; text = "beginLocationText"; ObjectID = "lyQ-Ah-Tps"; */
 "lyQ-Ah-Tps.text" = "beginLocationText";
 
 /* Class = "UILabel"; text = "Soort"; ObjectID = "mMn-ad-a6s"; */
-"mMn-ad-a6s.text" = "Soort";
+"mMn-ad-a6s.text" = "Kind";
 
 /* Class = "UITextField"; placeholder = "Volledige naam"; ObjectID = "mQk-OZ-uVW"; */
-"mQk-OZ-uVW.placeholder" = "Volledige naam";
+"mQk-OZ-uVW.placeholder" = "Full name";
 
 /* Class = "UILabel"; text = "Eindlocatie"; ObjectID = "mbY-gM-ef5"; */
-"mbY-gM-ef5.text" = "Eindlocatie";
+"mbY-gM-ef5.text" = "Endlocation";
 
 /* Class = "UILabel"; text = "Subtitle"; ObjectID = "mce-yN-b0Y"; */
 "mce-yN-b0Y.text" = "Subtitle";
 
 /* Class = "UITabBarItem"; title = "Trajectcontroles"; ObjectID = "nO2-EK-kMt"; */
-"nO2-EK-kMt.title" = "Trajectcontroles";
+"nO2-EK-kMt.title" = "Average Speed Checks";
 
 /* Class = "UIViewController"; title = "Registreren"; ObjectID = "nyg-oF-Vti"; */
-"nyg-oF-Vti.title" = "Registreren";
+"nyg-oF-Vti.title" = "Sign Up";
 
 /* Class = "UINavigationItem"; title = "Nieuw"; ObjectID = "oLT-Kb-b0U"; */
-"oLT-Kb-b0U.title" = "Nieuw";
+"oLT-Kb-b0U.title" = "New";
 
 /* Class = "UIBarButtonItem"; title = "Annuleren"; ObjectID = "pLi-3X-G6W"; */
-"pLi-3X-G6W.title" = "Annuleren";
+"pLi-3X-G6W.title" = "Cancel";
 
 /* Class = "UIViewController"; title = "Info"; ObjectID = "qFW-Py-u34"; */
 "qFW-Py-u34.title" = "Info";
 
 /* Class = "UIBarButtonItem"; title = "Terug"; ObjectID = "qML-gh-qoN"; */
-"qML-gh-qoN.title" = "Terug";
+"qML-gh-qoN.title" = "Back";
 
 /* Class = "UINavigationItem"; title = "Nieuw"; ObjectID = "r5M-Xn-kwV"; */
-"r5M-Xn-kwV.title" = "Nieuw";
+"r5M-Xn-kwV.title" = "New";
 
 /* Class = "UILabel"; text = "Omschrijving"; ObjectID = "rQg-2N-npx"; */
-"rQg-2N-npx.text" = "Omschrijving";
+"rQg-2N-npx.text" = "Description";
 
 /* Class = "UILabel"; text = "Info"; ObjectID = "s4U-kQ-fl8"; */
 "s4U-kQ-fl8.text" = "Info";
 
 /* Class = "UILabel"; text = "Eindlocatie"; ObjectID = "sIt-iY-XwO"; */
-"sIt-iY-XwO.text" = "Eindlocatie";
+"sIt-iY-XwO.text" = "Endlocation";
 
 /* Class = "UIViewController"; title = "AddPoliceCheck"; ObjectID = "sdC-3v-DxL"; */
 "sdC-3v-DxL.title" = "AddPoliceCheck";
 
 /* Class = "UINavigationItem"; title = "Flitsers"; ObjectID = "tEW-RI-dhQ"; */
-"tEW-RI-dhQ.title" = "Flitsers";
+"tEW-RI-dhQ.title" = "Speed Cameras";
 
 /* Class = "UITabBarItem"; title = "Controles"; ObjectID = "utt-AT-L5U"; */
-"utt-AT-L5U.title" = "Controles";
+"utt-AT-L5U.title" = "Police Checks";
 
 /* Class = "UILabel"; text = "Locatie"; ObjectID = "v0w-77-T3g"; */
-"v0w-77-T3g.text" = "Locatie";
+"v0w-77-T3g.text" = "Location";
 
 /* Class = "UILabel"; text = "(Optioneel)"; ObjectID = "vBO-ul-lSx"; */
-"vBO-ul-lSx.text" = "(Optioneel)";
+"vBO-ul-lSx.text" = "(Optional)";
 
 /* Class = "UITableViewController"; title = "PoliceChecks"; ObjectID = "vMo-3J-2sW"; */
 "vMo-3J-2sW.title" = "PoliceChecks";
 
 /* Class = "UITextField"; placeholder = "Omschrijving van de locatie en/of situatie"; ObjectID = "wX2-kZ-Z3R"; */
-"wX2-kZ-Z3R.placeholder" = "Omschrijving van de locatie en/of situatie";
+"wX2-kZ-Z3R.placeholder" = "Description of the location and/or situation";
 
 /* Class = "UIBarButtonItem"; title = "Opslaan"; ObjectID = "wkB-Tu-mqh"; */
-"wkB-Tu-mqh.title" = "Opslaan";
+"wkB-Tu-mqh.title" = "Save";
 
 /* Class = "UILabel"; text = "Naam"; ObjectID = "xx3-OX-gJ8"; */
-"xx3-OX-gJ8.text" = "Naam";
+"xx3-OX-gJ8.text" = "Name";
 
 /* Class = "UILabel"; text = "(Optioneel)"; ObjectID = "zpK-wx-KWh"; */
-"zpK-wx-KWh.text" = "(Optioneel)";
+"zpK-wx-KWh.text" = "(Optional)";
