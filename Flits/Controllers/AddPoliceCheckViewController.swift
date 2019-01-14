@@ -74,6 +74,7 @@ class AddPoliceCheckViewController: UIViewController, UITextFieldDelegate, UIIma
     // Select image and show in imageView
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
             imageView.image = image
             hasImage = true
 
